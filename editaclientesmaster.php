@@ -80,40 +80,12 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
 	<link rel="stylesheet" href="css/ie.css"> 
 <![endif]-->
 </head>
-<body id="page4">
-<div class="bg">
-<!--==============================header=================================-->   
-   <header>
-    	<div class="main">
-		<a class="logo" href="index.html">BBI</a>
-            <nav>
-                <ul class="sf-menu">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="empresa.html">EMPRESA</a></li>
-                    <li><a>SERVIÇOS</a>
-                    <ul>
-                    <li class="first"><a href="bi.html">Business Intelligence</a></li>
-                    <li class="last1"><a href="comercializacao.html">Comercialização</a></li>
-                    </ul>
-                    </li>
-                    <li class="menu-bot"><a href="galeria.html">GALERIA</a></li>
-                    <li><a href="contato.html">CONTATO</a></li>
-                    <li class="active"><a href="login.php">LOGIN</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
+<body id="page4"> 
+ 
 	<!--==============================content================================-->    
-    <section id="content">
-    <div class="bg2"> 
-        <div class="main">
-        <div class="content-line"></div>
-            <div class="container_24 p42">  
-		       <div class="pro_wrapper">
+    <section id="content"> 
         <h5 class="main_h5"><a href="adm.php">Administração:</a> Exibe, edita ou remove clientes master</h5>
-        </div>
-              <div class="pro_wrapper">
+                <div class="pro_wrapper">
                  <div id="areaa">
                  <table width="916" border="1">
                  <tr bgcolor="#666666">
@@ -137,24 +109,11 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
                    <?php } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1)); ?>
                  </table>
 
-</div>
-               </div>
-          </div>
-	</div>
-  </div>
- </section>
-</div>
-	<!--==============================footer=================================-->
-    <footer>
-        <div class="main">
-        <div class="foot-page">
-       	  BBI &copy; 2012 &nbsp;|&nbsp; <a class="link2" href="politica_privacidade.html">Política de Privacidade</a>
-          <div class="clear"></div>
-            <div class="foot"><!-- {%FOOTER_LINK} --></div>
-        </div>        
         </div>
-    </footer>  
-
+        <br>
+        <a href="adm.php" class="pro_btn pro_back"><span></span>Voltar</a>
+          </div> 
+ </section> 
 </body>
 </html>
 <?php

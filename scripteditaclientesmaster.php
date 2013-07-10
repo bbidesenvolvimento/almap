@@ -89,7 +89,7 @@ if (!isset($_SESSION['cod_adm'])) {
     	<div class="main">
 		<a class="logo" href="index.html">BBI</a>
             <nav>
-                <ul class="sf-menu">
+                <!--ul class="sf-menu">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="empresa.html">EMPRESA</a></li>
                     <li><a>SERVIÇOS</a>
@@ -101,7 +101,7 @@ if (!isset($_SESSION['cod_adm'])) {
                     <li class="menu-bot"><a href="galeria.html">GALERIA</a></li>
                     <li><a href="contato.html">CONTATO</a></li>
                     <li class="active"><a href="login.php">LOGIN</a></li>
-                </ul>
+                </ul-->
             </nav>
         </div>
     </header>
@@ -136,13 +136,14 @@ if (!isset($_SESSION['cod_adm'])) {
                  <td>imgUsuario Master</td>
                  <td><input name="arquivo" type="file" size="50"><BR>          
                  <input name="cod" type="hidden" id="cod" value="<?php echo $row_Recordset1['codMaster']; ?>">
-Atual: <?php echo $row_Recordset1['imgMaster']; ?><BR></td>
+                 Atual: <?php echo $row_Recordset1['imgMaster']; ?><BR></td>
                  </tr>
                  <td>&nbsp;</td>
                  <td> <input type="submit" value="Enviar"></td>
                  </tr>
                  </table>
                  </form>
+                 <a href="editaclientesmaster.php" class="pro_btn pro_back"><span></span>Voltar</a>
 </div>
                </div>
           </div>

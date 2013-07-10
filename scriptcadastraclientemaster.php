@@ -88,7 +88,7 @@ else {
     	<div class="main">
 		<a class="logo" href="index.html">BBI</a>
             <nav>
-                <ul class="sf-menu">
+                <!--ul class="sf-menu">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="empresa.html">EMPRESA</a></li>
                     <li><a>SERVIÇOS</a>
@@ -100,7 +100,7 @@ else {
                     <li class="menu-bot"><a href="galeria.html">GALERIA</a></li>
                     <li><a href="contato.html">CONTATO</a></li>
                     <li class="active"><a href="login.php">LOGIN</a></li>
-                </ul>
+                </ul-->
             </nav>
         </div>
     </header>
@@ -113,6 +113,7 @@ else {
             <div class="container_24 p42">  
 		       <div class="pro_wrapper">
         <h5 class="main_h5"><?php echo $mensagens ?></h5>
+        <a href="editaclientes.php" class="pro_btn pro_back"><span></span>Voltar</a>
         </div>
           </div>
 	</div>

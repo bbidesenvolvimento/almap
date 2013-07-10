@@ -11,17 +11,12 @@ if ((!$usuario) || (!$senha)){
 $usuario = "nao";
 $senha = "nao"; 
     //echo "Por favor, todos campos devem ser preenchidos! <br /><br />";
- 
- 
 }else{
  
-    
     $sql = mysql_query(
- 
                  "SELECT * FROM clientes
                  WHERE loginCLIENTE='{$usuario}'
                  AND senhaCliente='{$senha}'"
- 
                  );
  
     $login_check = mysql_num_rows($sql);

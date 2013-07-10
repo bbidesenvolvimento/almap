@@ -32,7 +32,7 @@
     	<div class="main">
 		<a class="logo" href="index.html">BBI</a>
             <nav>
-                <ul class="sf-menu">
+                <!--ul class="sf-menu">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="empresa.html">EMPRESA</a></li>
                     <li><a>SERVIÇOS</a>
@@ -44,7 +44,7 @@
                     <li class="menu-bot"><a href="galeria.html">GALERIA</a></li>
                     <li><a href="contato.html">CONTATO</a></li>
                     <li class="active"><a href="login.php">LOGIN</a></li>
-                </ul>
+                </ul-->
             </nav>
         </div>
     </header>

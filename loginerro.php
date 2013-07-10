@@ -57,7 +57,7 @@ var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_vBSOqKxV", "14", "s", "b
 		<a class="logo" href="index.html">BBI</a>
             <nav>
                 <ul class="sf-menu">
-                    <li><a href="index.html">HOME</a></li>
+                    <!--li><a href="index.html">HOME</a></li>
                     <li><a href="empresa.html">EMPRESA</a></li>
                     <li><a>SERVIÇOS</a>
                     <ul>
@@ -66,7 +66,7 @@ var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_vBSOqKxV", "14", "s", "b
                     </ul>
                     </li>
                     <li class="menu-bot"><a href="galeria.html">GALERIA</a></li>
-                    <li><a href="contato.html">CONTATO</a></li>
+                    <li><a href="contato.html">CONTATO</a></li-->
                     <li class="active"><a href="login.php">LOGIN</a></li>
                 </ul>
             </nav>
@@ -93,16 +93,15 @@ var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_vBSOqKxV", "14", "s", "b
             
            
            </div>
-           <div class="wrapper p16">
+           <!--div class="wrapper p16">
                 <article class="grid_24">
                   <div class="page1-box3 aligncenter">
-                 <!-- Begin DigiCert/ClickID site seal HTML -->
 <div id="DigiCertClickID_vBSOqKxV" data-language="en_US"></div>
 	<a href="http://www.digicert.com/">site seguro</a>
-<!-- End DigiCert/ClickID site seal HTML -->
+
                   </div>
                   </article>
-                    </div>               
+                    </div-->               
         </div>  
         </div>
       </div>  

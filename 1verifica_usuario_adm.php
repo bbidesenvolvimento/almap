@@ -14,7 +14,6 @@ $senha = "nao";
  
  
 }else{
- 
     
     $sql = mysql_query(
  
@@ -31,22 +30,21 @@ $senha = "nao";
         while ($row = mysql_fetch_array($sql)){
  
             foreach ($row AS $key => $val){
- 
+
                 $$key = stripslashes( $val );
- 
+
             }
  
             $_SESSION['cod_adm'] = $cod_adm;
-            
-            
- 
+            $_SESSION['login_adm'] = $login_adm;
+
             header("Location: adm.php");
- 
+
         }
  
     }else{
  
-                 header("Location: loginadm.php");
+            header("Location: loginadm.php");
  
     }
  

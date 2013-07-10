@@ -1,7 +1,7 @@
 @import"reset.css";@import"pro_pages_style.css";@import"grid.css";@import"forms.css";@import"prettyPhoto.css";@import"jquery.snippet.min.css";
 @import"../skin/blue.monday/jplayer.blue.monday.css";@import"../css/smoothness/jquery-ui-1.8.17.custom.css";
 body{
-	background: url(../images/main-bg.gif) repeat center 0;
+	/*background: url(../images/main-bg.gif) repeat center 0;*/
 	color:#333333;
 	position:relative;
 	min-width:1020px;
@@ -12,14 +12,14 @@ body{
 html,body{height:100%;}
 p{padding-bottom:18px;}
 a{
-	color:#e7654a;
+	color:#443d3c;
 	outline:none;
 	cursor:pointer;
 	text-decoration:none;
 }
 a:hover{
 	text-decoration:none;
-	color: #e7654a;
+	color: #e02914;
 }
 /*  Header styles */
 h1,h2,h3,h4,h5,h6{line-height:1.3em;color:#3c2725; font-family: 'Oswald', sans-serif; font-weight:normal; margin-bottom:10px;}
@@ -57,8 +57,8 @@ h6{font-size:22px;}
 .bg2 {
 	width:1000px;
 	margin:0 auto;
-	box-shadow: 0 0 11px 4px #100D0D;
-    -webkit-box-shadow:0 0 11px 4px #100D0D;
+	/*box-shadow: 0 0 11px 4px #100D0D;
+    -webkit-box-shadow:0 0 11px 4px #100D0D;*/
 }
 
 .wrapper {width:100%; overflow:hidden;}
@@ -107,20 +107,20 @@ h6{font-size:22px;}
 }
 
 .bg {
-	box-shadow: 0 10px 70px 30px rgba(187, 153, 146, 0.2);
-    -webkit-box-shadow:0 10px 70px 30px rgba(187, 153, 146, 0.2);
+	box-shadow: 0 10px 70px 30px rgba(184, 182, 182, 0.2);
+    -webkit-box-shadow:0 10px 70px 30px rgba(184, 182, 182, 0.2);
 	width:1000px;
 	margin:0 auto;	
 }
 
 .logo {
 	display:block;
-	width:232px;
-	height:253px;
+	width:180px;
+	height:50px;
 	position:absolute;
-	top:-95px;
+	top:20px;
 	z-index:999;
-	left:383px;
+	left:810px;
 	text-indent:-5000px;
 	background:url(../images/logo.png) 0 0 no-repeat;
 }
@@ -142,8 +142,10 @@ header {
 }
 
 header .main {
-	box-shadow:0 -5px 10px 2px #100D0D;
-    -webkit-box-shadow:0 -5px 10px 2px #100D0D;
+	/*box-shadow:0 -5px 10px 2px #100D0D;
+    -webkit-box-shadow:0 -5px 10px 2px #100D0D;*/
+    box-shadow: 0 10px 70px 30px rgba(184, 182, 182, 0.2);
+    -webkit-box-shadow:0 10px 70px 30px rgba(184, 182, 182, 0.2);
 }
 
 /*** MENU ***/
@@ -153,7 +155,7 @@ header .main {
 	list-style:		none;
 }
 nav {
-	background:url(../images/menu-bg.gif) repeat-x 0 0 #291f21;
+	/*background:url(../images/menu-bg.gif) repeat-x 0 0 #291f21;*/
 	min-height:75px;
 }
 .sf-menu {
@@ -165,13 +167,13 @@ nav {
 	float:			left;
 	position:		relative;
 	background:url(../images/bg-15.png) repeat 0 0;
-	border-radius:2px;
-	-webkit-border-radius:2px;
+	/*border-radius:2px;
+	-webkit-border-radius:2px;*/
 }
 .sf-menu li:hover,
 .sf-menu li.active,
 .sf-menu li.sfHover {
-	background:url(../images/menu-bg6.gif) repeat-x 0 0 #da5f49;
+	/*background:url(../images/menu-bg6.gif) repeat-x 0 0 #da5f49;*/
 }
 
 .sf-menu a {
@@ -182,7 +184,8 @@ nav {
 	line-height:22px;
 	text-transform:uppercase;
 	padding:10px 20px 10px 22px;
-	color:#fdfaf9;
+	/*color:#fdfaf9;*/
+	color:#000;
 }
 
 .sf-menu a:hover {
@@ -212,7 +215,7 @@ nav {
 	top:			-999em;
 	background:url(../images/menu-bg4.gif) no-repeat 0 0 #de604a;
 	border-radius:5px;
-    -webkit-border-radius:5px;
+    /*-webkit-border-radius:5px;
 	width:			178px; /* left offset of submenus need to match (see below) */
 }
 .sf-menu ul ul li {
@@ -300,7 +303,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 #content .main {
-	padding-top: 100px;
+	padding-top: 30px;
 	border-radius:3px;
 	-webkit-border-radius:3px;
 }
