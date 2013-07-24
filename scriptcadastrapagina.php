@@ -1,9 +1,9 @@
 ﻿<?php
 //verifica se existe conexão com bd, caso não tenta criar uma nova
-	$conexao = mysql_connect("localhost","fabricio","fabricio") //porta, usuário, senha
+	$conexao = mysql_connect("localhost","bbi","root") //porta, usuário, senha
 	or die("Erro na conexão com banco de dados"); //caso não consiga conectar mostra a mensagem de erro mostrada na conexão
 	
-	$select_db = mysql_select_db("bb"); //seleciona o banco de dados
+	$select_db = mysql_select_db("almap"); //seleciona o banco de dados
 	$mensagens="";
 
 // Repassa a variável do upload
@@ -51,7 +51,7 @@ else {
 	
 	mysql_close($conexao); //fecha conexão com banco de dados 
 
-
+header("Location: adm.php?tab=5");
 
 ?>
 

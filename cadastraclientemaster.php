@@ -13,69 +13,66 @@ if (!isset($_SESSION['cod_adm'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  	<title>BBI || Admin</title>
-  	<meta charset="utf-8">
-    <meta name="description" content="BBI. Information to empower people">
-    <meta name="keywords" content="Business Intelligence; Infográficos; Gestão de E-commerce; Conversões de banco de dados; gestão; BI; inteligência para negócios; Behemoth; BBI; banco de dados; informações; negócios">
-    <meta name="author" content="Behemoth Business Intelligence">
-    <link rel="stylesheet" href="css/style.css">
-    <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <style type="text/css">
-    #page4 .bg #content .bg2 .main .container_24.p42 .pro_wrapper #areaa {
-	clear: both;
-	padding-top: 10px;
-    font-size: 60%;
+ <title>BBI || Admin</title>
+ <meta charset="utf-8">
+ <meta name="description" content="BBI. Information to empower people">
+ <meta name="keywords" content="Business Intelligence; Infográficos; Gestão de E-commerce; Conversões de banco de dados; gestão; BI; inteligência para negócios; Behemoth; BBI; banco de dados; informações; negócios">
+ <meta name="author" content="Behemoth Business Intelligence">
+ <link rel="stylesheet" href="css/style.css">
+ <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+ <style type="text/css">
+ #page4 .bg #content .bg2 .main .container_24.p42 .pro_wrapper #areaa {
+   clear: both;
+   padding-top: 10px;
+   font-size: 60%;
 }
-    </style>
-    <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/script.js"></script>
+</style>
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/script.js"></script>
     <!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
        <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
     </a>
   </div>
-<![endif]-->
+  <![endif]-->
 <!--[if lt IE 9]>
 	<script src="js/html5.js"></script>
 	<link rel="stylesheet" href="css/ie.css"> 
-<![endif]-->
+    <![endif]-->
 </head>
 <body id="page4">
 	<!--==============================content================================-->    
     <section id="content">
-        <h5 class="main_h5"><a href="adm.php">Administração:</a>&emsp;Cadastro de clientes master </h5>
-              <div class="pro_wrapper">
-                 <div id="areaa">
-                 <form action="scriptcadastraclientemaster.php" method="POST" enctype="multipart/form-data">
-                 <table width="827">
-                 <tr>
-                 <td>Nome do Cliente Master:</td>
-                 <td><input name="clientemaster" type="text" id="clientemaster" size="50" /></td>
-                 </tr>
-                 <tr>
-                 <td>Login BBI Master:</td>
-                 <td><input name="loginmaster" type="text" id="loginmaster" size="50" /></td>
-                 </tr>
-                 <tr>
-                 <td>Senha BBI Master:</td>
-                 <td> <input name="senhamaster" type="text" id="senhamaster" size="50" /></td>
-                 </tr>
-                 <tr>
-                 <td>Logo do Cliente Master:</td>
-                 <td> <input name="arquivo" type="file" size="50"><BR></td>
-                 </tr>                 
-                 <td>&nbsp;</td>
-                 <td> <input type="submit" value="Enviar"></td>
-                 </tr>
-                 </table>
-</form>
-<a href="adm.php" class="pro_btn pro_back"><span></span>Voltar</a>
+        <h5 class="main_h5">Cadastro de clientes master </h5>
+        <div class="pro_wrapper">
+           <div id="areaa">
+               <form action="scriptcadastraclientemaster.php" method="POST" enctype="multipart/form-data">
+                   <table width="827">
+                       <tr>
+                           <td>Nome do Cliente Master:</td>
+                           <td><input name="clientemaster" type="text" id="clientemaster" size="50" /></td>
+                       </tr>
+                       <tr>
+                           <td>Login BBI Master:</td>
+                           <td><input name="loginmaster" type="text" id="loginmaster" size="50" /></td>
+                       </tr>
+                       <tr>
+                           <td>Senha BBI Master:</td>
+                           <td> <input name="senhamaster" type="text" id="senhamaster" size="50" /></td>
+                       </tr>
+                       <tr>
+                           <td>Logo do Cliente Master:</td>
+                           <td> <input name="arquivo" type="file" size="50"><BR></td>
+                       </tr>                 
+                       <td>&nbsp;</td>
+                       <td> <input type="submit" value="Enviar"></td>
+                   </tr>
+               </table>
+           </form> 
+       </div>
+   </div>
+</section>
 </div>
-               </div>
-        
- </section>
-</div>
-	
 </body>
 </html>

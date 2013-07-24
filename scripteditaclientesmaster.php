@@ -67,6 +67,11 @@ if (!isset($_SESSION['cod_adm'])) {
 	clear: both;
 	padding-top: 10px;
 }
+
+#imgMaster img{
+  width: 200px;
+  height: auto;
+}
     </style>
     <script src="js/jquery-1.7.1.min.js"></script>
     <script src="js/script.js"></script>
@@ -113,7 +118,7 @@ if (!isset($_SESSION['cod_adm'])) {
         <div class="content-line"></div>
             <div class="container_24 p42">  
 		       <div class="pro_wrapper">
-        <h5 class="main_h5"><a href="adm.php">Administração:</a>&emsp;Edição de Cliente Master: </h5>
+        <h5 class="main_h5">Edição de Cliente Master</h5>
         </div>
               <div class="pro_wrapper">
                  <div id="areaa">
@@ -133,17 +138,19 @@ if (!isset($_SESSION['cod_adm'])) {
                  <td> <input name="senha" type="text" id="senha" value="<?php echo $row_Recordset1['senhaMaster']; ?>" size="50" /></td>
                  </tr>
                  <tr>
-                 <td>imgUsuario Master</td>
+                 <td>Imagem Usuario Master</td>
                  <td><input name="arquivo" type="file" size="50"><BR>          
-                 <input name="cod" type="hidden" id="cod" value="<?php echo $row_Recordset1['codMaster']; ?>">
-                 Atual: <?php echo $row_Recordset1['imgMaster']; ?><BR></td>
+                 <input name="cod" type="hidden" id="cod" value="<?php echo $row_Recordset1['codMaster']; ?>"><br>
+                 </td>
                  </tr>
-                 <td>&nbsp;</td>
-                 <td> <input type="submit" value="Enviar"></td>
+                 
+                 <td>Atual:</td>
+                 <td></td>
                  </tr>
                  </table>
+                  <div id="ImgMaster"><img src="<?php echo $row_Recordset1['imgMaster']; ?>"></div> <BR>
+                 <input type="submit" class="pro_btn" value="Salvar"><a href="adm.php?tab=3" class="pro_btn pro_back"><span></span>Cancelar</a></td>
                  </form>
-                 <a href="editaclientesmaster.php" class="pro_btn pro_back"><span></span>Voltar</a>
 </div>
                </div>
           </div>

@@ -53,9 +53,45 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
    padding-top: 10px;
    font-size: 60%;
  }
+
+ #Wrapper {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  background: #EEEEEE;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+}
+
+#progressbox {
+  border: 1px solid #0099CC;
+  padding: 1px;
+  position:relative;
+  width:400px;
+  border-radius: 3px;
+  margin: 10px;
+  display:none;
+  text-align:left;
+}
+#progressbar {
+  height:20px;
+  border-radius: 3px;
+  background-color: #003333;
+  width:1%;
+}
+#statustxt {
+  top:3px;
+  left:50%;
+  position:absolute;
+  display:inline-block;
+  color: #000000;
+}
  </style>
-     <script src="js/jquery-1.7.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script src="js/script.js"></script>
+    <script src="js/jquery.form.js"></script>
+    
 
     <!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
@@ -68,15 +104,55 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
 	<script src="js/html5.js"></script>
 	<link rel="stylesheet" href="css/ie.css"> 
   <![endif]-->
+
+  <script>/*
+ $(document).ready(function() { 
+    //elements
+    var progressbox   = $('#progressbox');
+    var progressbar   = $('#progressbar');
+    var statustxt     = $('#statustxt');
+    var submitbutton  = $("#SubmitButton");
+    var myform      = $("#novoCliente");
+    var output      = $("#output");
+    var completed     = '0%';
+    
+        $(myform).ajaxForm({
+          beforeSend: function() { //brfore sending form
+            submitbutton.attr('disabled', ''); // disable upload button
+            statustxt.empty();
+            progressbox.show(); //show progressbar
+            progressbar.width(completed); //initial value 0% of progressbar
+            statustxt.html(completed); //set status text
+            statustxt.css('color','#000'); //initial color of status text
+          },
+          uploadProgress: function(event, position, total, percentComplete) { //on progress
+            progressbar.width(percentComplete + '%') //update progressbar percent complete
+            statustxt.html(percentComplete + '%'); //update status text
+            if(percentComplete>50)
+              {
+                statustxt.css('color','#fff'); //change status text to white after 50%
+              }
+            },
+          complete: function(response) { // on complete
+            $( this ).dialog( "Sucesso" );
+            output.html(response.responseText); //update element with received data
+            myform.resetForm();  // reset form
+            submitbutton.removeAttr('disabled'); //enable submit button
+            progressbox.hide(); // hide progressbar
+          }
+      });
+        }); */
+  </script>
+
 </head>
 <body id="page4">
 	<!--==============================content================================-->    
   <section id="content"> 
 
-      <h5 class="main_h5"><a href="adm.php">Administração:</a>&emsp;Cadastro de clientes comum </h5>
+      <h5 class="main_h5">Cadastro de clientes comum </h5>
 
       <div id="areaa">
-       <form action="scriptcadastracliente.php" method="POST" enctype="multipart/form-data">
+       <form id="novoCliente" action="scriptcadastracliente.php" method="POST" enctype="multipart/form-data">
          <table width="827">
            <tr>
              <td>Nome do Cliente:</td>
@@ -91,16 +167,16 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
              <td> <input name="senha" type="text" id="senha" size="50" /></td>
            </tr>
            <tr>
-             <td>usuario Tableau:</td>
+             <td>Usuário Tableau:</td>
              <td><input name="usuarioTB" type="text" id="usuarioTB" size="50" /></td>
            </tr>
            <tr>
-             <td>usuario Master:</td>
+             <td>Usuário Master:</td>
              <td><select name="usuarioMaster" id="usuarioMaster">
+                <option value="0">Nenhum</option>
                <?php
                do {  
                 ?>
-                <option value="0">Nenhum</option>
                 <option value="<?php echo $row_Recordset1['codMaster']?>"><?php echo $row_Recordset1['nomeMaster']?></option>
                 <?php
               } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1));
@@ -113,20 +189,20 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
             </select></td>
           </tr>
           <tr>
-           <td>imgUsuario</td>
-           <td> <input name="arquivo" type="file" size="50"><BR></td>
+           <td>Imagem Usuario</td>
+           <td> <input name="arquivo" type="file" size="50"><BR>
          </tr>
          <td>&nbsp;</td>
-         <td> <input type="submit" class="pro_btn pro_submit" value="Enviar"></td>
+         <td> <input type="submit" id="SubmitButton" class="pro_btn pro_submit" value="Salvar"></td>
+   </form>
        </tr>
      </table>
-   </form> 
- </br></br>
- <a href="adm.php" class="pro_btn pro_back"><span></span>Voltar</a> 
- <a href="loginadm.php" class="pro_btn"><span></span>Logoff</a>
+
 
 </div>
 </div>
+<div id="progressbox"><div id="progressbar"></div ><div id="statustxt">0%</div ></div>
+<div id="output"></div>
 </section>
 </body>
 </html>

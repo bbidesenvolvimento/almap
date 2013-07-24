@@ -121,17 +121,7 @@ $totalRows_Recordset2 = mysql_num_rows($Recordset2);
 		<a class="logo" href="index.html">BBI</a>
             <nav>
                 <ul class="sf-menu">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="empresa.html">EMPRESA</a></li>
-                    <li><a>SERVIÇOS</a>
-                    <ul>
-                    <li class="first"><a href="bi.html">Business Intelligence</a></li>
-                    <li class="last1"><a href="comercializacao.html">Comercialização</a></li>
-                    </ul>
-                    </li>
-                    <li class="menu-bot"><a href="galeria.html">GALERIA</a></li>
-                    <li><a href="contato.html">CONTATO</a></li>
-                    <li class="active"><a href="login.php">LOGIN</a></li>
+                     
                 </ul>
             </nav>
         </div>
@@ -148,7 +138,7 @@ $totalRows_Recordset2 = mysql_num_rows($Recordset2);
         </div>
               <div class="pro_wrapper">
                  <div id="areaa">
-                 <form method="POST" action="<?php echo $editFormAction; ?>" name="form" >
+                 <form method="POST" action="editapagina.php" name="form" >
                  <table width="827">
                  <tr>
                  <td>Nome do Cliente:</td>
@@ -183,12 +173,18 @@ do {
                  <td>Legenda da pagina:</td>
                  <td><input name="legenda" type="text" id="legenda" value="<?php echo $row_Recordset2['legenda']; ?>" size="50" /></td>
                  </tr>
-                 <tr>
-                 <td>Imagem do Serviço:</td>
-                 <td><input name="img" type="text" id="img" value="<?php echo $row_Recordset2['imgPagina']; ?>" size="50" />                   <input name="codPagina" type="hidden" id="codPagina" value="<?php echo $row_Recordset2['cod_pagina']; ?>">                   <BR></td>
-                 </tr>
+                   <tr>
+                     <td>Imagem do Serviço:</td>
+                     <td><input name="img" type="file" id="img" value="<?php echo $row_Recordset2['imgPagina']; ?>" size="50" />
+                       <br>
+                                Atual:<br> 
+                                  <div id="imgPagina"><img src="<?php echo $row_Recordset2['imgPagina']; ?>"></div>
+                          <BR>
+
+                      <input name="codPagina" type="hidden" id="codPagina" value="<?php echo $row_Recordset2['cod_pagina']; ?>">                   <BR></td>
+                   </tr>
                  <td>&nbsp;</td>
-                 <td> <input type="submit" value="Enviar" name="bb" id="bb"> </td>
+                 <td> <input type="submit" value="Enviar" name="bb" id="bb" class="pro_btn pro_back"> </td>
                  </tr>
                  </table>
                  <input type="hidden" name="MM_update" value="form">
@@ -197,8 +193,9 @@ do {
 
  </div>
                </div>
+          <a href="adm.php?tab=6" class="pro_btn pro_back"><span></span>Voltar</a>
           </div>
-	</div>
+  </div>
   </div>
  </section>
 </div>

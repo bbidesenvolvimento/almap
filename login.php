@@ -69,7 +69,6 @@ var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_vBSOqKxV", "14", "s", "b
                     <li><a href="contato.html">CONTATO</a></li-->
                     <li class="active"><a href="login.php">LOGIN</a></li>
                     <li class="active"><a href="loginadm.php">ADMIN</a></li>
-
                 </ul>
             </nav>
         </div>

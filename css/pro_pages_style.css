@@ -539,7 +539,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 }
 	#pro_breadcrumbs-two .current,
 	#pro_breadcrumbs-two .current:hover{
-	background: #e7654a;
+	background: #4b3b37;
 	padding: .7em 1em;
 	float: left;
 	text-decoration: none;
@@ -548,7 +548,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	position: relative;
 	font-weight: bold;
 	cursor: default;
-	text-transform: uppercase;
+	text-transform: capitalize
 }
 	#pro_breadcrumbs-two .current::after{
 	content: "";
@@ -557,7 +557,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	  margin-top: -1.5em;   
 	  border-top: 1.5em solid transparent;
 	  border-bottom: 1.5em solid transparent;
-	  border-left: 1em solid #e7654a;
+	  border-left: 1em solid #4b3b37;
 	  right: -1em;
 }
 	#pro_breadcrumbs-two .current::before{
@@ -567,7 +567,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	  margin-top: -1.5em;   
 	  border-width: 1.5em 0 1.5em 1em;
 	  border-style: solid;
-	  border-color: #e7654a #e7654a #e7654a transparent;
+	  border-color: #4b3b37 #4b3b37 #4b3b37 transparent;
 	  left: -1em;
 }
 	
@@ -597,7 +597,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	font-weight: bold;
 	}	
 	#pro_breadcrumbs-two a:hover{
-	background-color: #e7654a;
+	background-color: #4b3b37;
 	font-weight: bolder;
 	color: #FFF;
 	text-shadow:none;
@@ -612,7 +612,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	  border-color: #ddd #ddd #ddd transparent;
 	  left: -1em;
 	}	
-	#pro_breadcrumbs-two a:hover::before{border-color: #e7654a #e7654a #e7654a transparent;}	
+	#pro_breadcrumbs-two a:hover::before{border-color: #4b3b37 #4b3b37 #4b3b37 transparent;}	
 	#pro_breadcrumbs-two a::after{
 	  content: "";
 	  position: absolute;
@@ -623,7 +623,7 @@ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIH
 	  border-left: 1em solid #ddd;
 	  right: -1em;
 	}	
-	#pro_breadcrumbs-two a:hover::after{border-left-color: #e7654a;}	
+	#pro_breadcrumbs-two a:hover::after{border-left-color: #4b3b37;}	
 	
 	#pro_breadcrumbs-two span{
 	background: #ddd;

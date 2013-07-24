@@ -93,17 +93,7 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
 		<a class="logo" href="index.html">BBI</a>
             <nav>
                 <ul class="sf-menu">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="empresa.html">EMPRESA</a></li>
-                    <li><a>SERVIÇOS</a>
-                    <ul>
-                    <li class="first"><a href="bi.html">Business Intelligence</a></li>
-                    <li class="last1"><a href="comercializacao.html">Comercialização</a></li>
-                    </ul>
-                    </li>
-                    <li class="menu-bot"><a href="galeria.html">GALERIA</a></li>
-                    <li><a href="contato.html">CONTATO</a></li>
-                    <li class="active"><a href="login.php">LOGIN</a></li>
+                     
                 </ul>
             </nav>
         </div>
@@ -116,7 +106,7 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
         <div class="content-line"></div>
             <div class="container_24 p42">  
 		       <div class="pro_wrapper">
-        <h5 class="main_h5"><a href="adm.php">Administração:</a> Exibe, edita ou remove clientes: </h5>
+        <h5 class="main_h5">Exibe, edita ou remove páginas: </h5>
         </div>
               <div class="pro_wrapper">
                  <div id="areaa">
@@ -141,6 +131,7 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
 
 </div>
                </div>
+               <a href="adm.php?tab=6" class="pro_btn pro_back"><span></span>Voltar</a>
           </div>
 	</div>
   </div>
