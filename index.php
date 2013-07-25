@@ -7,7 +7,7 @@
 // Mise  our par Herve eclerc herve.leclerc@alterway.fr
 // ic?? par Mark James <http://www.famfamfam.com/lab/icons/silk/>
 
-
+header("Location: login.php");
 
 //chemin jusqu'au fichier de conf de WampServer
 $wampConfFile = '../wampmanager.conf';
