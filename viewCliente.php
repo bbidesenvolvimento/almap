@@ -102,9 +102,9 @@ function formata_data_extenso($strDate)
 
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="https://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
@@ -390,10 +390,10 @@ function formata_data_extenso($strDate)
 
 		</style>
 
-		<meta https-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 		<title>Information to Empower People</title>
-		<link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<link href="/images/icons/favicon.ico" rel="icon" type="image/x-icon" />
 		
 <link rel="stylesheet" href="js/ui/jquery-ui.css" />
@@ -404,7 +404,7 @@ function formata_data_extenso($strDate)
 		<script type="text/javascript">
 
 
-
+/*
 		var _gaq = _gaq || [];
 
 		_gaq.push(['_setAccount', 'UA-32185514-1']);
@@ -422,7 +422,7 @@ function formata_data_extenso($strDate)
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 
 		})();
-
+*/
 
 
 		</script>
