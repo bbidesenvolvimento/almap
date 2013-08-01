@@ -1,5 +1,5 @@
 <?php
-// If this file is not included from the MMHTTPDB possible hacking problem.
+// If this file is not included from the MMhttpsDB possible hacking problem.
 if (!function_exists('create_error')){
 	die();
 }
@@ -136,7 +136,7 @@ class MySqlConnection
 					$table_name = @$_POST['Database'];
 			}
 			//added backtick for handling reserved words and special characters
-			//http://dev.mysql.com/doc/refman/5.0/en/legal-names.html
+			//https://dev.mysql.com/doc/refman/5.0/en/legal-names.html
 			$sql = ' SHOW TABLES FROM ' . $this->ensureTicks($table_name) ;
 			$results = mysql_query($sql, $this->connectionId) or $this->HandleException();
 
@@ -178,7 +178,7 @@ class MySqlConnection
 	{
 		$xmlOutput = "";
 		//added backtick for handling reserved words and special characters
-		//http://dev.mysql.com/doc/refman/5.0/en/legal-names.html
+		//https://dev.mysql.com/doc/refman/5.0/en/legal-names.html
 		$query  = "DESCRIBE ".$this->ensureTicks($TableName);
 		$result = mysql_query($query) or $this->HandleException();
 
@@ -337,7 +337,7 @@ class MySqlConnection
 	{
 		$outSQL = $inputSQL;
 		//added backtick for handling reserved words and special characters
-		//http://dev.mysql.com/doc/refman/5.0/en/legal-names.html
+		//https://dev.mysql.com/doc/refman/5.0/en/legal-names.html
 
 		//only add ticks if not already there
 		$oLength = strlen($outSQL);
@@ -377,7 +377,7 @@ class MySqlConnection
 	{
 		$xmlOutput = '';
 		//added backtick for handling reserved words and special characters
-		//http://dev.mysql.com/doc/refman/5.0/en/legal-names.html
+		//https://dev.mysql.com/doc/refman/5.0/en/legal-names.html
 		$query  = "DESCRIBE ".$this->ensureTicks($TableName);
 		$result = mysql_query($query) or $this->HandleException();
 		

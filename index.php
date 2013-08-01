@@ -5,7 +5,7 @@
 // et Romain Bourdon <romain@romainbourdon.com>
 //  
 // Mise  our par Herve eclerc herve.leclerc@alterway.fr
-// ic?? par Mark James <http://www.famfamfam.com/lab/icons/silk/>
+// ic?? par Mark James <https://www.famfamfam.com/lab/icons/silk/>
 
 header("Location: login.php");
 
@@ -59,7 +59,7 @@ $langues = array(
 		'txtNoProjet' => 'No projects yet.<br />To create a new one, just create a directory in \'www\'.',
 		'txtAlias' => 'Your Aliases',
 		'txtNoAlias' => 'No Alias yet.<br />To create a new one, use the WAMPSERVER menu.',
-		'faq' => 'http://www.en.wampserver.com/faq.php'
+		'faq' => 'https://www.en.wampserver.com/faq.php'
 	),
 	'fr' => array(
 		'langue' => 'Fran?s',
@@ -76,7 +76,7 @@ $langues = array(
 		'txtNoProjet' => 'Aucun projet.<br /> Pour en ajouter un nouveau, cr&eacute;ez simplement un r&eacute;pertoire dans \'www\'.',
 		'txtAlias' => 'Vos Alias',
 		'txtNoAlias' => 'Aucun alias.<br /> Pour en ajouter un nouveau, utilisez le menu de WAMPSERVER.',
-		'faq' => 'http://www.wampserver.com/faq.php'
+		'faq' => 'https://www.wampserver.com/faq.php'
 	)
 );
 
@@ -260,7 +260,7 @@ if (isset ($_GET['lang']))
 {
 	$langue = $_GET['lang'];
 }
-elseif (isset ($_SERVER['HTTP_ACCEPT_LANGUAGE']) AND preg_match("/^fr/", $_SERVER['HTTP_ACCEPT_LANGUAGE']))
+elseif (isset ($_SERVER['https_ACCEPT_LANGUAGE']) AND preg_match("/^fr/", $_SERVER['https_ACCEPT_LANGUAGE']))
 {
 	$langue = 'fr';
 }
@@ -319,12 +319,12 @@ foreach ($loaded_extensions as $extension)
 $pageContents = <<< EOPAGE
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+	"https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <html lang="en" xml:lang="en">
 <head>
 	<title>{$langues[$langue]['titreHtml']}</title>
-	<meta http-equiv="Content-Type" content="txt/html; charset=utf-8" />
+	<meta https-equiv="Content-Type" content="txt/html; charset=utf-8" />
 
 	<style type="text/css">
 * {
@@ -482,9 +482,9 @@ a:hover {
 	${aliasContents}			
 	</ul>
 	<ul id="foot">
-		<li><a href="http://www.wampserver.com">WampServer</a></li> - 
-        <li><a href="http://www.wampserver.com/en/donations.php">Donate</a></li> -
-		<li><a href="http://www.alterway.fr">Alter Way</a></li>
+		<li><a href="https://www.wampserver.com">WampServer</a></li> - 
+        <li><a href="https://www.wampserver.com/en/donations.php">Donate</a></li> -
+		<li><a href="https://www.alterway.fr">Alter Way</a></li>
 	</ul>
 </body>
 </html>

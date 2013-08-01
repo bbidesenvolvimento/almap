@@ -3,7 +3,7 @@
 $cat = $_GET['cat'];
 $sub = $_GET['sub'];
 
-//https://srv.bbi.net.br/views/TVPORASSINATURA/PERFILPENETRAOEEVOLUODAPENETRAODOMEIO?:embed=yes&:toolbar=yes
+//httpss://srv.bbi.net.br/views/TVPORASSINATURA/PERFILPENETRAOEEVOLUODAPENETRAODOMEIO?:embed=yes&:toolbar=yes
 //processo para pegar o link com sessão mais atual para o grafico
  
 $server = "srv.bbi.net.br";
@@ -13,7 +13,7 @@ function get_trusted_url($user,$server,$view_url) {
 	$params = ':embed=yes&:toolbar=no';
 	$ticket = get_trusted_ticket($server, $user, $_SERVER['REMOTE_ADDR']);
 	if($ticket > 0) {
-		return "https://$server/trusted/$ticket/$view_url?$params";
+		return "httpss://$server/trusted/$ticket/$view_url?$params";
 	}
 		else 
 	return 0;
@@ -24,7 +24,7 @@ function get_trusted_ticket($wgserver, $user, $remote_addr) {
     'username' => $user,
     'client_ip' => $remote_addr
   );
-  return http_parse_message(http_post_fields("http://$wgserver/trusted", $params))->body;
+  return https_parse_message(https_post_fields("https://$wgserver/trusted", $params))->body;
 }
 
 /*echo "<pre>";
@@ -78,5 +78,5 @@ switch ($cat) {
 }
 
 
-//$novoLink = "http://exmplo.com.br?sessionID=adfaiodfya98ifdh98ayf";
+//$novoLink = "https://exmplo.com.br?sessionID=adfaiodfya98ifdh98ayf";
 //header("Location:". $novoLink);

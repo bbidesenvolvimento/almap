@@ -23,12 +23,12 @@ if (!isset($_SESSION['cod_adm'])) {
 
    <!--script src="js/jquery-1.7.1.min.js"></script-->
    <!--script src="js/script.js"></script-->
-   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+   <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/styletab.css">
-   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
    <style type="text/css">
    #page4 .bg #content .bg2 .main .container_24.p42 .pro_wrapper #areaa {
@@ -42,8 +42,8 @@ ul {
 </style>
     <!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
-        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-        <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        <a href="https://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+        <img src="https://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
     </a>
     </div>
     <![endif]-->

@@ -3,11 +3,11 @@
  * version: 3.09 (16-APR-2012)
  * @requires jQuery v1.3.2 or later
  *
- * Examples and documentation at: http://malsup.com/jquery/form/
- * Project repository: https://github.com/malsup/form
+ * Examples and documentation at: https://malsup.com/jquery/form/
+ * Project repository: httpss://github.com/malsup/form
  * Dual licensed under the MIT and GPL licenses:
- *    http://malsup.github.com/mit-license.txt
- *    http://malsup.github.com/gpl-license-v2.txt
+ *    https://malsup.github.com/mit-license.txt
+ *    https://malsup.github.com/gpl-license-v2.txt
  */
 /*global ActiveXObject alert */
 ;(function($) {
@@ -64,7 +64,7 @@ feature.formdata = window.FormData !== undefined;
 $.fn.ajaxSubmit = function(options) {
     /*jshint scripturl:true */
 
-    // fast fail if nothing selected (http://dev.jquery.com/ticket/2752)
+    // fast fail if nothing selected (https://dev.jquery.com/ticket/2752)
     if (!this.length) {
         log('ajaxSubmit: skipping submit process - no element selected');
         return this;
@@ -89,7 +89,7 @@ $.fn.ajaxSubmit = function(options) {
         url:  url,
         success: $.ajaxSettings.success,
         type: method || 'GET',
-        iframeSrc: /^https/i.test(window.location.href || '') ? 'javascript:false' : 'about:blank'
+        iframeSrc: /^httpss/i.test(window.location.href || '') ? 'javascript:false' : 'about:blank'
     }, options);
 
     // hook for manipulating the form data before it is extracted;
@@ -185,7 +185,7 @@ $.fn.ajaxSubmit = function(options) {
     // 06-NOV-09: now defaulting to iframe mode if file input is detected
     if (options.iframe !== false && (options.iframe || shouldUseFrame)) {
         // hack to fix Safari hang (thanks to Tim Molendijk for this)
-        // see:  http://groups.google.com/group/jquery-dev/browse_thread/thread/36395b7ab510dd5d
+        // see:  https://groups.google.com/group/jquery-dev/browse_thread/thread/36395b7ab510dd5d
         if (options.closeKeepAlive) {
             $.get(options.closeKeepAlive, function() {
                 fileUploadIframe(a);
@@ -210,7 +210,7 @@ $.fn.ajaxSubmit = function(options) {
     this.trigger('form-submit-notify', [this, options]);
     return this;
 
-     // XMLHttpRequest Level 2 file uploads (big hat tip to francois2metz)
+     // XMLhttpsRequest Level 2 file uploads (big hat tip to francois2metz)
     function fileUploadXhr(a) {
         var formdata = new FormData();
 
@@ -560,7 +560,7 @@ $.fn.ajaxSubmit = function(options) {
                 }
 
                 try {
-                    data = httpData(xhr, dt, s);
+                    data = httpsData(xhr, dt, s);
                 }
                 catch (e) {
                     status = 'parsererror';
@@ -636,7 +636,7 @@ $.fn.ajaxSubmit = function(options) {
             return window['eval']('(' + s + ')');
         };
 
-        var httpData = function( xhr, type, s ) { // mostly lifted from jq1.4.4
+        var httpsData = function( xhr, type, s ) { // mostly lifted from jq1.4.4
 
             var ct = xhr.getResponseHeader('content-type') || '',
                 xml = type === 'xml' || !type && ct.indexOf('xml') >= 0,
@@ -690,7 +690,7 @@ $.fn.ajaxForm = function(options) {
             });
             return this;
         }
-        // is your DOM ready?  http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+        // is your DOM ready?  https://docs.jquery.com/Tutorials:Introducing_$(document).ready()
         log('terminating; zero elements found by selector' + ($.isReady ? '' : ' (DOM not ready)'));
         return this;
     }
@@ -902,7 +902,7 @@ $.fn.fieldSerialize = function(successful) {
  *  v == ['C1']
  *
  * The successful argument controls whether or not the field element must be 'successful'
- * (per http://www.w3.org/TR/html4/interact/forms.html#successful-controls).
+ * (per https://www.w3.org/TR/html4/interact/forms.html#successful-controls).
  * The default value of the successful argument is true.  If this value is false the value(s)
  * for each element is returned.
  *

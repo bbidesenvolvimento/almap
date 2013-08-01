@@ -25,8 +25,8 @@ var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_vBSOqKxV", "14", "s", "b
 <!-- End DigiCert/ClickID site seal JavaScript code -->
 <!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
-     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-       <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+     <a href="https://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+       <img src="https://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
     </a>
   </div>
 <![endif]-->
@@ -43,7 +43,7 @@ var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_vBSOqKxV", "14", "s", "b
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.src = ('httpss:' == document.location.protocol ? 'httpss://ssl' : 'https://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
@@ -99,7 +99,7 @@ var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_vBSOqKxV", "14", "s", "b
                   <!--div class="page1-box3 aligncenter">
                  <Begin DigiCert/ClickID site seal HTML -->
 <!--div id="DigiCertClickID_vBSOqKxV" data-language="en_US"></div>
-	<a href="http://www.digicert.com/">site seguro</a>
+	<a href="https://www.digicert.com/">site seguro</a>
 < End DigiCert/ClickID site seal HTML -->
                   </div>
                   </article>

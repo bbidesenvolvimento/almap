@@ -27,7 +27,7 @@ c
 	
 	if(mysql_affected_rows() == 1){ //verifica se foi afetada alguma linha, nesse caso inserida alguma linha
 		$mensagens=$mensagens."<p>Cadastro feito com sucesso</p>";
-		$mensagens=$mensagens."<p>Seu usuário poder refefinir a senha no endereço: https://bbi.net.br/redefine_senha_usuario.php</p>";
+		$mensagens=$mensagens."<p>Seu usuário poder refefinir a senha no endereço: httpss://bbi.net.br/redefine_senha_usuario.php</p>";
 		$mensagens=$mensagens.'<a href="administrarUsuarios.php?c=' . $c . '&cm=' . $codMaster . '">Voltar para a área de Administração de Usuários</a>'; //Apenas um link para retornar para o formulário de cadastro
 	} else {
 		$mensagens=$mensagens."Erro, não foi possível inserir no banco de dados";
@@ -59,8 +59,8 @@ c
     <script src="js/script.js"></script>
     <!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
-     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-       <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+     <a href="https://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+       <img src="https://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
     </a>
   </div>
 <![endif]-->

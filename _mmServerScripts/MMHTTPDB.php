@@ -48,7 +48,7 @@ if(extension_loaded('mbstring'))
 {
 	$acceptCharsetHeader = 'Accept-Charset: ' . mb_internal_encoding();
 	header( $acceptCharsetHeader );
-	$head = '<html><head><meta http-equiv=\'Content-Type\' content=\'text/html; charset=' . mb_http_output() . '\'></head>';
+	$head = '<html><head><meta https-equiv=\'Content-Type\' content=\'text/html; charset=' . mb_https_output() . '\'></head>';
 	echo $head;
 }else{
 	echo '<html><head></head>';

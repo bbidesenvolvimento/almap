@@ -3,8 +3,8 @@
  *
  * Copyright (c) 2006 Klaus Hartl (stilbuero.de)
  * Dual licensed under the MIT and GPL licenses:
- * http://www.opensource.org/licenses/mit-license.php
- * http://www.gnu.org/licenses/gpl.html
+ * https://www.opensource.org/licenses/mit-license.php
+ * https://www.gnu.org/licenses/gpl.html
  *
  */
 
@@ -31,7 +31,7 @@
  * @option String path The value of the path atribute of the cookie (default: path of page that created the cookie).
  * @option String domain The value of the domain attribute of the cookie (default: domain of page that created the cookie).
  * @option Boolean secure If true, the secure attribute of the cookie will be set and the cookie transmission will
- *                        require a secure protocol (like HTTPS).
+ *                        require a secure protocol (like httpsS).
  * @type undefined
  *
  * @name $.cookie

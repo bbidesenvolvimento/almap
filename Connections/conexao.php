@@ -1,7 +1,7 @@
 <?php
 # FileName="Connection_php_mysql.htm"
 # Type="MYSQL"
-# HTTP="true"
+# https="true"
 $hostname_conexao = "localhost";
 $database_conexao = "almap";
 $username_conexao = "bbi";
