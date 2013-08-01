@@ -23,12 +23,12 @@ if (!isset($_SESSION['cod_adm'])) {
 
    <!--script src="js/jquery-1.7.1.min.js"></script-->
    <!--script src="js/script.js"></script-->
-   <link rel="stylesheet" href="://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-   <script src="://code.jquery.com/jquery-1.9.1.js"></script>
-   <script src="://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+   <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+   <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/styletab.css">
-   <link href='://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
    <style type="text/css">
    #page4 .bg #content .bg2 .main .container_24.p42 .pro_wrapper #areaa {
