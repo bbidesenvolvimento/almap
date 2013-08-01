@@ -8,7 +8,7 @@
     <meta name="author" content="Behemoth Business Intelligence">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/demo.css">
-    <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <style type="text/css">
     #page5 .bg #content .bg2 .main .container_24 .pro_wrapper .forgot {
 	color: #F00;
