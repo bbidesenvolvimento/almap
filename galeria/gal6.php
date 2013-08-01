@@ -12,9 +12,9 @@
   <meta property="fb:app_id" content="388857924517709" /> 
   <meta property="og:type" content="company" /> 
   <meta property="og:title" content="Investimento Publicitário base Intermeios" /> 
-  <meta property="og:image" content="httpss://www.bbi.net.br/galeria/300x200_5.jpg" /> 
+  <meta property="og:image" content="https://www.bbi.net.br/galeria/300x200_5.jpg" /> 
   <meta property="og:description" content="BBI. Information to empower people" /> 
-  <meta property="og:url" content="httpss://www.bbi.net.br/galeria/gal5.html" />
+  <meta property="og:url" content="https://www.bbi.net.br/galeria/gal5.html" />
   <meta property="og:site_name" content="BBI"/>
   <meta property="fb:admins" content="gabriel.queiroz.9883"/>
   
@@ -47,7 +47,7 @@ var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_vBSOqKxV", "14", "s", "b
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('httpss:' == document.location.protocol ? 'httpss://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
@@ -98,8 +98,8 @@ include 'tableau_trusted2.php';
 		<div class="pro_wrapper">
        <div class="grid_19 push_11">
         <div class="socialshares">
-        <div class="fb-like" data-href="httpss://www.bbi.net.br/galeria/gal5.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend" data-font="segoe ui"></div>
-        &nbsp;<a href="httpss://twitter.com/share" class="twitter-share-button" data-url="httpss://www.bbi.net.br/galeria/gal5.html" data-text="Relatório de Investimento Publicitário" data-via="BBI_empower_me" data-lang="pt" data-hashtags="empoweringpeople">Tweetar</a>
+        <div class="fb-like" data-href="https://www.bbi.net.br/galeria/gal5.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend" data-font="segoe ui"></div>
+        &nbsp;<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.bbi.net.br/galeria/gal5.html" data-text="Relatório de Investimento Publicitário" data-via="BBI_empower_me" data-lang="pt" data-hashtags="empoweringpeople">Tweetar</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
         </div>
@@ -119,10 +119,10 @@ include 'tableau_trusted2.php';
               </div>
               <article class="grid_24">
                 <div class="grid_24">
-                <iframe src="https://www.facebook.com/plugins/comments.php?href=httpss://www.bbi.net.br/galeria/gal5.html&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:16px;" allowTransparency="true"></iframe>  
+                <iframe src="https://www.facebook.com/plugins/comments.php?href=https://www.bbi.net.br/galeria/gal5.html&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:16px;" allowTransparency="true"></iframe>  
                   </div>
                   <div class="grid_24">
-                  <div class="fb-comments" data-href="httpss://www.bbi.net.br/galeria/gal5.html" data-width="470" data-num-posts="10"></div>
+                  <div class="fb-comments" data-href="https://www.bbi.net.br/galeria/gal5.html" data-width="470" data-num-posts="10"></div>
                   </div>
                   </article>
               <div class="wrapper p16">

@@ -13,7 +13,7 @@ function get_trusted_url($user,$server,$view_url) {
 
   $ticket = get_trusted_ticket($server, $user, $_SERVER['REMOTE_ADDR']);
   if($ticket > 0) {
-    return "httpss://$server/trusted/$ticket/$view_url?$params";
+    return "https://$server/trusted/$ticket/$view_url?$params";
   }
   else 
     return 0;

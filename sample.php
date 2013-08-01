@@ -8,19 +8,19 @@
 include 'tableau_trusted2.php';
 
 /*
-América Latina: httpss://srv.bbi.net.br/views/AmricaLatina/INVESTIMENTOSEMPROPAGANDA
-Custos de Mídia: httpss://srv.bbi.net.br/views/CustosdeMdia/EVOLUODOSCUSTOSDEMDIA
-Entretenimento: httpss://srv.bbi.net.br/views/Entretenimento/NMERODECINEMASQUEEXIBEMPUBLICIDADE
-Jornal: httpss://srv.bbi.net.br/views/JORNAL/PERFILEPENETRAODOSCONSUMIDORESDOMEIO
-Mercado & Demografia: httpss://srv.bbi.net.br/views/MERCADODEMOGRAFIA_0/AFORMAOUNIVERSITRIADEPUBLICIDADENOBRASIL
-Mídia Digital: httpss://srv.bbi.net.br/views/MDIADIGITAL/OSMAIORESUSURIOSDEINTERNETDOMUNDOeNMERODEINTERNAUTAPORGRANDESREGIES
-Mídia Internacional: httpss://srv.bbi.net.br/views/MDIAINTERNACIONAL/INVESTIMENTOEMPROPAGANDANOMUNDO
-Out of Home: httpss://srv.bbi.net.br/views/OUT-OF-HOME/PERFILDEMOGRFICOEPENETRAO
-Pesquisas Ad-Hoc: httpss://srv.bbi.net.br/views/PesquisaAd-Hoc/ALIMENTAO
-Rádio: httpss://srv.bbi.net.br/views/Rdio/EVOLUODOSDOMICLIOSCOMRDIO
-Revista: httpss://srv.bbi.net.br/views/REVISTA/PERFILEPENETRAODOMEIO
-Televisão: httpss://srv.bbi.net.br/views/TELEVISO/PERFILDEMOGRFICOPENETRAOEEVOLUODAPENETRAONOMEIO
-TV por Assinatura: httpss://srv.bbi.net.br/views/TVPORASSINATURA/PERFILPENETRAOEEVOLUODAPENETRAODOMEIO
+América Latina: https://srv.bbi.net.br/views/AmricaLatina/INVESTIMENTOSEMPROPAGANDA
+Custos de Mídia: https://srv.bbi.net.br/views/CustosdeMdia/EVOLUODOSCUSTOSDEMDIA
+Entretenimento: https://srv.bbi.net.br/views/Entretenimento/NMERODECINEMASQUEEXIBEMPUBLICIDADE
+Jornal: https://srv.bbi.net.br/views/JORNAL/PERFILEPENETRAODOSCONSUMIDORESDOMEIO
+Mercado & Demografia: https://srv.bbi.net.br/views/MERCADODEMOGRAFIA_0/AFORMAOUNIVERSITRIADEPUBLICIDADENOBRASIL
+Mídia Digital: https://srv.bbi.net.br/views/MDIADIGITAL/OSMAIORESUSURIOSDEINTERNETDOMUNDOeNMERODEINTERNAUTAPORGRANDESREGIES
+Mídia Internacional: https://srv.bbi.net.br/views/MDIAINTERNACIONAL/INVESTIMENTOEMPROPAGANDANOMUNDO
+Out of Home: https://srv.bbi.net.br/views/OUT-OF-HOME/PERFILDEMOGRFICOEPENETRAO
+Pesquisas Ad-Hoc: https://srv.bbi.net.br/views/PesquisaAd-Hoc/ALIMENTAO
+Rádio: https://srv.bbi.net.br/views/Rdio/EVOLUODOSDOMICLIOSCOMRDIO
+Revista: https://srv.bbi.net.br/views/REVISTA/PERFILEPENETRAODOMEIO
+Televisão: https://srv.bbi.net.br/views/TELEVISO/PERFILDEMOGRFICOPENETRAOEEVOLUODAPENETRAONOMEIO
+TV por Assinatura: https://srv.bbi.net.br/views/TVPORASSINATURA/PERFILPENETRAOEEVOLUODAPENETRAODOMEIO
 */
 ?>
 

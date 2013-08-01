@@ -1,4 +1,4 @@
-// jquery.tweet.js - See https://tweet.seaofclouds.com/ or httpss://github.com/seaofclouds/tweet for more info
+// jquery.tweet.js - See https://tweet.seaofclouds.com/ or https://github.com/seaofclouds/tweet for more info
 // Copyright (c) 2008-2011 Todd Matthews & Steve Purcell
 (function($) {
   $.fn.tweet = function(o){
@@ -137,7 +137,7 @@
     }
 
     function build_api_url() {
-      var proto = ('httpss:' == document.location.protocol ? 'httpss:' : 'https:');
+      var proto = ('https:' == document.location.protocol ? 'https:' : 'https:');
       var count = (s.fetch === null) ? s.count : s.fetch;
       var common_params = '&include_entities=1&callback=?';
       if (s.list) {
@@ -155,9 +155,9 @@
     function extract_avatar_url(item, secure) {
       if (secure) {
         return ('user' in item) ?
-          item.user.profile_image_url_httpss :
+          item.user.profile_image_url_https :
           extract_avatar_url(item, false).
-            replace(/^https:\/\/[a-z0-9]{1,3}\.twimg\.com\//, "httpss://s3.amazonaws.com/twitter_production/");
+            replace(/^https:\/\/[a-z0-9]{1,3}\.twimg\.com\//, "https://s3.amazonaws.com/twitter_production/");
       } else {
         return item.profile_image_url || item.user.profile_image_url;
       }
@@ -171,7 +171,7 @@
       o.source = item.source;
       o.screen_name = item.from_user || item.user.screen_name;
       o.avatar_size = s.avatar_size;
-      o.avatar_url = extract_avatar_url(item, (document.location.protocol === 'httpss:'));
+      o.avatar_url = extract_avatar_url(item, (document.location.protocol === 'https:'));
       o.retweet = typeof(item.retweeted_status) != 'undefined';
       o.tweet_time = parse_date(item.created_at);
       o.join_text = s.join_text == "auto" ? build_auto_join_text(item.text) : s.join_text;

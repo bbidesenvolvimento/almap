@@ -27,7 +27,7 @@ c
 	
 	if(mysql_affected_rows() == 1){ //verifica se foi afetada alguma linha, nesse caso inserida alguma linha
 		$mensagens=$mensagens."<p>Cadastro feito com sucesso</p>";
-		$mensagens=$mensagens."<p>Seu usuário poder refefinir a senha no endereço: httpss://bbi.net.br/redefine_senha_usuario.php</p>";
+		$mensagens=$mensagens."<p>Seu usuário poder refefinir a senha no endereço: https://bbi.net.br/redefine_senha_usuario.php</p>";
 		$mensagens=$mensagens.'<a href="administrarUsuarios.php?c=' . $c . '&cm=' . $codMaster . '">Voltar para a área de Administração de Usuários</a>'; //Apenas um link para retornar para o formulário de cadastro
 	} else {
 		$mensagens=$mensagens."Erro, não foi possível inserir no banco de dados";

@@ -3,7 +3,7 @@
 $cat = $_GET['cat'];
 $sub = $_GET['sub'];
 
-//httpss://srv.bbi.net.br/views/TVPORASSINATURA/PERFILPENETRAOEEVOLUODAPENETRAODOMEIO?:embed=yes&:toolbar=yes
+//https://srv.bbi.net.br/views/TVPORASSINATURA/PERFILPENETRAOEEVOLUODAPENETRAODOMEIO?:embed=yes&:toolbar=yes
 //processo para pegar o link com sessão mais atual para o grafico
  
 $server = "srv.bbi.net.br";
@@ -13,7 +13,7 @@ function get_trusted_url($user,$server,$view_url) {
 	$params = ':embed=yes&:toolbar=no';
 	$ticket = get_trusted_ticket($server, $user, $_SERVER['REMOTE_ADDR']);
 	if($ticket > 0) {
-		return "httpss://$server/trusted/$ticket/$view_url?$params";
+		return "https://$server/trusted/$ticket/$view_url?$params";
 	}
 		else 
 	return 0;
