@@ -396,9 +396,9 @@ function formata_data_extenso($strDate)
 		<link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<link href="/images/icons/favicon.ico" rel="icon" type="image/x-icon" />
 		
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-   <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+<link rel="stylesheet" href="js/ui/jquery-ui.css" />
+   <script src="js/ui/jquery-1.9.1.js"></script>
+   <script src="js/ui/jquery-ui.js"></script> 
    <link rel="stylesheet" href="css/style.css">
 
 		<script type="text/javascript">
