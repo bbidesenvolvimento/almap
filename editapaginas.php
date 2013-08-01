@@ -46,9 +46,11 @@ if (!function_exists("GetSQLValueString")) {
 
 mysql_select_db($database_conexao, $conexao);
 $query_Recordset1 = "SELECT * FROM paginas INNER JOIN clientes ON paginas.cod_cliente = clientes.codCLIENTE";
+//$query_Recordset1 = "SELECT * FROM paginas order by cod_cliente asc";
 $Recordset1 = mysql_query($query_Recordset1, $conexao) or die(mysql_error());
 $row_Recordset1 = mysql_fetch_assoc($Recordset1);
-$totalRows_Recordset1 = mysql_num_rows($Recordset1);
+$totalRows_Recordset1 = mysql_num_rows($Recordset1); 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

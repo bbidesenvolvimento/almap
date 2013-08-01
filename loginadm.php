@@ -30,7 +30,7 @@
 <!--==============================header=================================-->   
    <header>
     	<div class="main">
-		<a class="logo" href="index.html">BBI</a>
+		<a class="logo" href="login.php">BBI</a>
             <nav>
                 <!--ul class="sf-menu">
                     <li><a href="index.html">HOME</a></li>

@@ -1,6 +1,6 @@
 ﻿<?php
  
-define('BD_USER', 'root');
+define('BD_USER', 'bbi');
 define('BD_PASS', 'root');
 define('BD_NAME', 'almap');
  

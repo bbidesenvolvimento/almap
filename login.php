@@ -54,7 +54,7 @@ var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_vBSOqKxV", "14", "s", "b
 <!--==============================header=================================-->   
    <header>
     	<div class="main">
-		<a class="logo" href="index.html">BBI</a>
+		<a class="logo" href="login.php">BBI</a>
             <nav>
                 <ul class="sf-menu">
                     <!--li><a href="index.html">HOME</a></li>
@@ -67,7 +67,7 @@ var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_vBSOqKxV", "14", "s", "b
                     </li>
                     <li class="menu-bot"><a href="galeria.html">GALERIA</a></li>
                     <li><a href="contato.html">CONTATO</a></li-->
-                    <li class="active"><a href="login.php">LOGIN</a></li>
+                    <!--li class="active"><a href="login.php">LOGIN</a></li-->
                     <li class="active"><a href="loginadm.php">ADMIN</a></li>
                 </ul>
             </nav>
