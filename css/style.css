@@ -120,9 +120,11 @@ h6{font-size:22px;}
 	position:absolute;
 	top:20px;
 	z-index:999;
-	left:810px;
+	left:30px;
 	text-indent:-5000px;
 	background:url(../images/logo.png) 0 0 no-repeat;
+	background-size: 167px;
+	top: 13px;
 }
 
 .main_h5 {
@@ -165,7 +167,7 @@ nav {
 	padding-left:27px;
 }
 .sf-menu li {
-	float:			left;
+	float:			right;
 	position:		relative;
 	background:url(../images/bg-15.png) repeat 0 0;
 	/*border-radius:2px;

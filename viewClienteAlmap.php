@@ -19,19 +19,19 @@ $cc=$_GET['cc'];
 
 mysql_select_db($database_conexao, $conexao);
 function getUserTableau($codMaster,$conexao){
-  $sql_cli = "select c.usuarioTABLEAU from clientes c where c.codCLIENTE = $codMaster LIMIT 1;"; 
-  $RecordsetMst = mysql_query($sql_cli, $conexao) or die(mysql_error());
-  while($rs_Cli = mysql_fetch_object($RecordsetMst)) {
-    return $rs_Cli->usuarioTABLEAU;
-  } 
+	$sql_cli = "select c.usuarioTABLEAU from clientes c where c.codCLIENTE = $codMaster LIMIT 1;"; 
+	$RecordsetMst = mysql_query($sql_cli, $conexao) or die(mysql_error());
+	while($rs_Cli = mysql_fetch_object($RecordsetMst)) {
+		return $rs_Cli->usuarioTABLEAU;
+	} 
 }
 
 function getUserImg($codMaster,$conexao){
-  $sql_cli = "select c.imgUSUARIO from clientes c where c.codCLIENTE = $codMaster LIMIT 1;"; 
-  $RecordsetMst = mysql_query($sql_cli, $conexao) or die(mysql_error());
-  while($rs_Cli = mysql_fetch_object($RecordsetMst)) {
-    return $rs_Cli->imgUSUARIO;
-  } 
+	$sql_cli = "select c.imgUSUARIO from clientes c where c.codCLIENTE = $codMaster LIMIT 1;"; 
+	$RecordsetMst = mysql_query($sql_cli, $conexao) or die(mysql_error());
+	while($rs_Cli = mysql_fetch_object($RecordsetMst)) {
+		return $rs_Cli->imgUSUARIO;
+	} 
 }
 
 $UserTableau = getUserTableau($cc,$conexao);
@@ -126,7 +126,7 @@ function formata_data_extenso($strDate)
 
 	#total #topo {
 		clear: both;
-		height: 190px;
+		height: 210px;
 	}
 
 	#total #rodape {
@@ -141,7 +141,7 @@ function formata_data_extenso($strDate)
 	}
 
 	#total #topo #img {
-		float: left;
+		float: right;
 		height: 100px;
 		width: 930px;
 	}
@@ -149,7 +149,7 @@ function formata_data_extenso($strDate)
 	#img img{
 		width: 100px;	
 		height: 100%;
-		margin-top: 50px;
+		float: right;
 	}
 
 	#total #topo #log {
@@ -188,15 +188,17 @@ function formata_data_extenso($strDate)
 		text-align: center;
 		text-decoration: none;
 		background-image: url(images/tambor.png);
-		background-size: 118px 181px;
+		background-size: 94px 144px;
 		margin: auto;
 		background-repeat: no-repeat;
 		background-position: center center;
 		position: absolute;
-		width: 110px;
-		height: 181px;
+		top: 45px;
+		width: 94px;
+		height: 144px;
 		float: right;
 		background-color: #fff;
+		left: 430px;
 	}
 
 
@@ -360,10 +362,10 @@ function formata_data_extenso($strDate)
 		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<link href="/images/icons/favicon.ico" rel="icon" type="image/x-icon" />
 		
-<link rel="stylesheet" href="js/ui/jquery-ui.css" />
-   <script src="js/ui/jquery-1.9.1.js"></script>
-   <script src="js/ui/jquery-ui.js"></script> 
-   <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="js/ui/jquery-ui.css" />
+		<script src="js/ui/jquery-1.9.1.js"></script>
+		<script src="js/ui/jquery-ui.js"></script> 
+		<link rel="stylesheet" href="css/style.css">
 
 		<script type="text/javascript">
 
@@ -389,113 +391,107 @@ function formata_data_extenso($strDate)
 */
 
 
-		</script>
-		<script src="js/jquery-1.7.1.min.js"></script>
-		<script src="js/script.js"></script>
+</script>
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/script.js"></script>
 
-	</head>
-
-
-
-	<body>
-
-		<div id="total">
-
-			<div id="topo">
-
-				<div id="img"><img src="<?php echo $UserImg;?>" width="930" height="100" /></div>
+</head>
 
 
-				<!--div id="volt"><a class="logoffbtn" href="destroisessao.php"></a></div-->
 
-				<div id="log">
-					<?/*php  if($_SESSION['tipo'] == "cliente"){ */?>
-						<a class="voltarbtn" href="areaCliente.php"></a>
-						<?php  //} else { ?>
-						<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
-						<?php /* } */?>
+<body>
+
+	<div id="total">
+
+		<div id="topo">
+
+			<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
+				<a class="logo" href="login.php" style="position:static !important">BBI</a>
+			<div id="img">
+				<img src="<?php echo $UserImg;?>" width="930" height="100" />
+			</div>
+
+
+		</div>
+
+		<div id="conteudo">
+			<iframe align="middle" src="<?php echo get_trusted_url($UserTableau,'srv.bbi.net.br',$url)?>"></iframe>
+		</br>
+		<a style="float:right" href="destroisessao.php" class="pro_btn"><span></span>Logoff</a>
+	</div>
+
+	<div id="comentarios">
+		<h3><br />
+			<br /><br />
+
+			Área de Comentários 
+
+			<br />
+			<br />
+		</h3>
+		<?php if ($totalRows_Recordset1 > 0) { // Show if recordset not empty ?>
+		<?php do { ?>
+		<dl class="pro_slide-down-box">
+			<dt><h5><span></span> Comentário postado por <div id="destak"><?php echo $row_Recordset1['nomeCliente']; ?></div> em <div id="destak"><?php echo formata_data_extenso($row_Recordset1['dataComentario']); ?></div>
+				<?php 
+				if($row_Recordset1['codCliente'] == $_SESSION['codCLIENTE']){
+
+
+					?>
+					<!-- Esta parte e dedicada a remover o comentario do proprio cliente -->
+					<a href="removecomentario.php?codComentario=<?php echo $row_Recordset1['codComentario']; ?>&cp=<?php echo $codPagina; ?>&url=<?php echo $url ?>&cc=<?php echo $row_Recordset1['codCliente']; ?>" >
+
+						<div id="comenta">Excluir</div></a>
+
+						<?php } ?>
+					</h5></dt> 
+					<dd><p><?php echo $row_Recordset1['texto']; ?></p></dd>
+				</dl>
+
+				<?php } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1)); ?>
+				<?php } // Show if recordset not empty ?>
+
+				<div id="areaa">
+					<table width="100%">
+						<form action="scriptcadastraform.php" method="POST" enctype="multipart/form-data">
+							<tr>
+								<td width="17%" valign="top"><strong>Postar Comentário:</strong></td>
+								<td width="83%">
+									<textarea name="comentario" cols="100%" rows="5" id="comentario" style="font-family:'Century Gothic'" dir="ltr" lang="pt" onfocus="if (this.value == 'Digite aqui seu comentário') {this.value=''}" onblur="if(this.value == '') { this.value='Digite aqui seu comentário'}" spellcheck="true" value="Digite aqui seu comentário">Digite aqui seu comentário</textarea>
+									<input type="hidden" id="url" name="url" value="<?php echo $url ?>">
+									<input type="hidden" id="cp" name="cp" value="<?php 
+									echo $codPagina;
+									?>">
+									<input type="hidden" id="cc" name="cc" value="<?php echo $_SESSION['codCLIENTE']; ?>">
+									<input type="hidden" id="nc" name="nc" value="<?php echo $_SESSION['nomeCLIENTE']; ?>">
+
+
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td><input type="submit" class="button1" value="Enviar"></td>
+							</tr>
+						</form>
+					</table>
 				</div>
+
+
+
+
+
 
 			</div>
 
-			<div id="conteudo">
-				<iframe align="middle" src="<?php echo get_trusted_url($UserTableau,'srv.bbi.net.br',$url)?>"></iframe>
-			</br>
-			<a style="float:right" href="destroisessao.php" class="pro_btn"><span></span>Logoff</a>
+			<div id="rodape">&nbsp;<br />
+				<br />
 			</div>
 
-			<div id="comentarios">
-				<h3><br />
-					<br /><br />
 
-					Área de Comentários 
+		</div>
+	</body>
 
-					<br />
-					<br />
-				</h3>
-				<?php if ($totalRows_Recordset1 > 0) { // Show if recordset not empty ?>
-				<?php do { ?>
-				<dl class="pro_slide-down-box">
-					<dt><h5><span></span> Comentário postado por <div id="destak"><?php echo $row_Recordset1['nomeCliente']; ?></div> em <div id="destak"><?php echo formata_data_extenso($row_Recordset1['dataComentario']); ?></div>
-						<?php 
-						if($row_Recordset1['codCliente'] == $_SESSION['codCLIENTE']){
-
-
-							?>
-							<!-- Esta parte e dedicada a remover o comentario do proprio cliente -->
-							<a href="removecomentario.php?codComentario=<?php echo $row_Recordset1['codComentario']; ?>&cp=<?php echo $codPagina; ?>&url=<?php echo $url ?>&cc=<?php echo $row_Recordset1['codCliente']; ?>" >
-
-								<div id="comenta">Excluir</div></a>
-
-								<?php } ?>
-							</h5></dt> 
-							<dd><p><?php echo $row_Recordset1['texto']; ?></p></dd>
-						</dl>
-
-						<?php } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1)); ?>
-						<?php } // Show if recordset not empty ?>
-
-						<div id="areaa">
-							<table width="100%">
-								<form action="scriptcadastraform.php" method="POST" enctype="multipart/form-data">
-									<tr>
-										<td width="17%" valign="top"><strong>Postar Comentário:</strong></td>
-										<td width="83%">
-											<textarea name="comentario" cols="100%" rows="5" id="comentario" style="font-family:'Century Gothic'" dir="ltr" lang="pt" onfocus="if (this.value == 'Digite aqui seu comentário') {this.value=''}" onblur="if(this.value == '') { this.value='Digite aqui seu comentário'}" spellcheck="true" value="Digite aqui seu comentário">Digite aqui seu comentário</textarea>
-											<input type="hidden" id="url" name="url" value="<?php echo $url ?>">
-											<input type="hidden" id="cp" name="cp" value="<?php 
-											echo $codPagina;
-											?>">
-											<input type="hidden" id="cc" name="cc" value="<?php echo $_SESSION['codCLIENTE']; ?>">
-											<input type="hidden" id="nc" name="nc" value="<?php echo $_SESSION['nomeCLIENTE']; ?>">
-
-
-										</td>
-									</tr>
-									<tr>
-										<td>&nbsp;</td>
-										<td><input type="submit" class="button1" value="Enviar"></td>
-									</tr>
-								</form>
-							</table>
-						</div>
-
-
-
-
-
-
-					</div>
-
-					<div id="rodape">&nbsp;<br />
-						<br />
-					</div>
-
-
-				</div>
-			</body>
-
-			</html>
-			<?php
-			mysql_free_result($Recordset1);
-			?>
+	</html>
+	<?php
+	mysql_free_result($Recordset1);
+	?>
