@@ -5,23 +5,50 @@ include "1con.php"; // INCLUI A CONEXAO
 $usuario = $_POST['usuarioLOG'];// RECEBE O LOGIN DO FORM ANTERIOR
 $senha = $_POST['senhaLOG'];// RECEBE A SENHA DO FORM ANTERIOR
 
+
 if ((!$usuario) || (!$senha)){
 	$usuario = "nao";
 	$senha = "nao"; 
 	//CASO O USUARIO NAO TENHA PREENCHIDO COLOCA O VALOR NAO PARA OS CAMPOS
 	// ISTO IRA FAZER NAO LOGAR;
 }else{
-	
-	$sqlMaster = mysql_query(
-					"SELECT * FROM usuariomaster
-					WHERE loginMaster='{$usuario}'
-                 	AND senhaMaster='{$senha}'"
+
+	if($usuario == "admin"){
+		$sql = mysql_query(
+			"SELECT * FROM adm
+			WHERE login_adm='{$usuario}'
+			AND senha_adm='{$senha}'"
+			);
+
+		$login_check = mysql_num_rows($sql);
+
+		if ($login_check > 0){
+			while ($row = mysql_fetch_array($sql)){
+				foreach ($row AS $key => $val){
+					$$key = stripslashes( $val );
+
+				}
+
+				$_SESSION['cod_adm'] = $cod_adm;
+				$_SESSION['login_adm'] = $login_adm;
+
+
+			}
+				header("Location: areaClienteAlmap.php");
+		}else{
+			//erro
+			header("Location: loginerro.php");
+		}
+	}else{
+
+		$sqlMaster = mysql_query(
+			"SELECT * FROM usuariomaster
+			WHERE loginMaster='{$usuario}'
+			AND senhaMaster='{$senha}'"
 					); // sql para busca na tabela master
-	
-	
 
  	$login_checkMaster = mysql_num_rows($sqlMaster); // variavel para checar o sql da tabela master
-	
+
 	if ($login_checkMaster > 0){// tem dados na consulta
 		while ($row = mysql_fetch_array($sqlMaster)){
 			foreach ($row AS $key => $val){
@@ -41,11 +68,11 @@ if ((!$usuario) || (!$senha)){
 		}
 	}else{ // nao tem o cliente na tabela master
 		$sql = mysql_query(
-					"SELECT * FROM clientes
-					WHERE loginCLIENTE='{$usuario}'
-                 	AND senhaCliente='{$senha}'"
+			"SELECT * FROM clientes
+			WHERE loginCLIENTE='{$usuario}'
+			AND senhaCliente='{$senha}'"
 					); // sql para busca na tabela clientes
-					
+
 		$login_checkCliente = mysql_num_rows($sql); // variavel para checar o sql da tabela cliente
 		
 		if ($login_checkCliente > 0){// tem dados na consulta
@@ -71,9 +98,9 @@ if ((!$usuario) || (!$senha)){
 			
 			// nao tem o cliente na tabela cliente
 			$sqlSimples = mysql_query(
-					"SELECT * FROM usuariosimples
-					WHERE loginUsuarioSP='{$usuario}'
-                 	AND senhaUsuarioSP='{$senha}'"
+				"SELECT * FROM usuariosimples
+				WHERE loginUsuarioSP='{$usuario}'
+				AND senhaUsuarioSP='{$senha}'"
 					); // sql para busca na tabela clientes
 			
 			$login_checkSimples = mysql_num_rows($sqlSimples); // variavel para checar o sql da tabela cliente
@@ -99,16 +126,9 @@ if ((!$usuario) || (!$senha)){
 				header("Location: loginerro.php");// redireciona para a pagina de erro
 				//echo("Location: loginerro.php");// redireciona para a pagina de erro
 			}
-				
-			
-			
 		}
-		
 	}
-	
-
 }
 
- 
-
+}
 ?>
