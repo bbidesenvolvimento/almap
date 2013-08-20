@@ -186,7 +186,7 @@ $totalRows_Recordset2 = mysql_num_rows($Recordset2);
 
                        Atual:<br>
                             <?php if($row_Recordset2['imgPagina'] != 'pagsclientes/' && $row_Recordset2['imgPagina'] != '') : ?>
-                            <div id="imgPagina"><img src="<?php echo $row_Recordset2['imgPagina']; ?>"></div>
+                            <div id="imgPagina"><img src="pagsclientes/<?php echo $row_Recordset2['imgPagina']; ?>"></div>
                           <?php else: ?>
                           <div id="imgPagina"><br><i>Nenhuma imagem cadastrada.</i></div>
                         <?php endif; ?>

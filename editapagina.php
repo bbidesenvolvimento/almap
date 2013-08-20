@@ -42,6 +42,8 @@ if (!function_exists("GetSQLValueString")) {
   }
 }
 
+$diretorio = "pagsclientes/";
+
 $editFormAction = $_SERVER['PHP_SELF'];
 if (isset($_SERVER['QUERY_STRING'])) {
   $editFormAction .= "?" . htmlentities($_SERVER['QUERY_STRING']);
@@ -53,7 +55,7 @@ if ((isset($_POST["MM_update"])) && ($_POST["MM_update"] == "form")) {
    GetSQLValueString($_POST['nome'], "text"),
    GetSQLValueString($_POST['url'], "text"),
    GetSQLValueString($_POST['legenda'], "text"),
-   GetSQLValueString($_POST['img'], "text"),
+   GetSQLValueString($diretorio.$_POST['img'], "text"),
    GetSQLValueString($_POST['codPagina'], "int"));
 
   mysql_select_db($database_conexao, $conexao);
