@@ -127,6 +127,7 @@ function formata_data_extenso($strDate)
 	#total #topo {
 		clear: both;
 		height: 210px;
+		width: 1100px;
 	}
 
 	#total #rodape {
@@ -407,8 +408,10 @@ function formata_data_extenso($strDate)
 
 			<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
 				<a class="logo" href="login.php" style="position:static !important">BBI</a>
+				<a style="float:right;clear:both;margin-top: -40px;" href="areaClienteAlmap.php" class="pro_btn">Voltar</a>
 			<div id="img">
-				<img src="<?php echo $UserImg;?>" width="930" height="100" />
+				<img src="<?php echo $UserImg;?>" width="980" height="100" />
+
 			</div>
 
 
