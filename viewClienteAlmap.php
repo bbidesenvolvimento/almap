@@ -148,9 +148,9 @@ function formata_data_extenso($strDate)
 	}
 
 	#img img{
-		width: 100px;	
-		height: 100%;
 		float: right;
+		width: 150px;
+height: auto;
 	}
 
 	#total #topo #log {
