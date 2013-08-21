@@ -65,7 +65,12 @@ h6{font-size:22px;}
 	background:url(../images/content-bg.gif) repeat 0 0;
 	position:relative;
 	font-family: AlmapFonte;
-	
+}
+
+
+
+.main a {
+	/*cursor: default;*/
 }
 
 .bg2 {
@@ -139,6 +144,7 @@ h6{font-size:22px;}
 	background:url(../images/logo.png) 0 0 no-repeat;
 	background-size: 167px;
 	top: 13px;
+	cursor: default;
 }
 
 .main_h5 {
