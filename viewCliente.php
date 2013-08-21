@@ -220,7 +220,7 @@ function formata_data_extenso($strDate)
 		display: block;
 		text-align: center;
 		text-decoration: none;
-		background-image: url(images/tambor.png);
+/*		background-image: url(images/tambor.png);*/
 		background-size: 118px 181px;
 		margin: auto;
 		background-repeat: no-repeat;

@@ -188,7 +188,7 @@ height: auto;
 		display: block;
 		text-align: center;
 		text-decoration: none;
-		background-image: url(images/tambor.png);
+/*		background-image: url(images/tambor.png);*/
 		background-size: 94px 144px;
 		margin: auto;
 		background-repeat: no-repeat;

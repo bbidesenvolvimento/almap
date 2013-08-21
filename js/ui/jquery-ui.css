@@ -6,6 +6,8 @@
 
 /* Layout helpers
 ----------------------------------*/
+
+
 .ui-helper-hidden {
 	display: none;
 }
@@ -760,10 +762,12 @@ button.ui-button::-moz-focus-inner {
 .ui-tabs .ui-tabs-nav li.ui-state-disabled a,
 .ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
 	cursor: text;
+
 }
 .ui-tabs .ui-tabs-nav li a, /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
 .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
 	cursor: pointer;
+
 }
 .ui-tabs .ui-tabs-panel {
 	display: block;
@@ -786,17 +790,19 @@ body .ui-tooltip {
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-	font-family: Verdana,Arial,sans-serif;
+	font: 'Trebuchet MS';
 	font-size: 1.1em;
 }
 .ui-widget .ui-widget {
+	font: 'Trebuchet MS';
 	font-size: 1em;
 }
 .ui-widget input,
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-	font-family: Verdana,Arial,sans-serif;
+	/*font-family: Verdana,Arial,sans-serif;*/
+	font: 'Trebuchet MS';
 	font-size: 1em;
 }
 .ui-widget-content {

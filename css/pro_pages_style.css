@@ -1,5 +1,6 @@
 /* ---- */
-#propage,#propage p{font:13px/16px Arial, Helvetica, sans-serif;}
+ 
+#propage,#propage p{font-family:13px/16px 'Trebuchet MS';}
 .pro_clear{clear:both;line-height:0;font-size:0;overflow:hidden;height:0;width:100%;}
 .pro_wrapper{
 	overflow:hidden;
@@ -210,7 +211,7 @@ blockquote em{ display:inline-block; margin-top:10px;}
 	border-radius: 3px;
 	text-shadow: 0 1px 1px white;
 	box-shadow:0 1px 1px #fff;
-	font: bold 11px Sans-Serif;
+	font: bold 11px 'Trebuchet MS';
 	line-height:15px;
 	white-space: nowrap;
 	vertical-align: middle;
