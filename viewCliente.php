@@ -109,9 +109,7 @@ function formata_data_extenso($strDate)
 <head>
 
 	<style>
-
 	#total
-
 	{
 		width: 1050px;
 		margin:0 auto;
@@ -121,45 +119,32 @@ function formata_data_extenso($strDate)
 	}
 
 	#total #topo {
-
 		clear: both;
-
-		height: 190px;
-
+		height: 60px;
+		position: absolute;
 	}
 
 	#total #rodape {
-
 		clear: both;
-
 		height: 30px;
-
 		text-align: center;
-
 	}
 
 	#total #conteudo {
-
 		clear: both;
-
-		height: 850px;
-
+		height: 850px; 
 	}
 
 	#total #topo #img {
-
-		float: left;
-
+		float: right;
 		height: 100px;
-
 		width: 930px;
-
 	}
 
 	#img img{
-		width: 100px;	
-		height: 100%;
-		margin-top: 50px;
+		float: right;
+		width: 150px;
+height: auto;
 	}
 
 	#total #topo #log {
@@ -169,68 +154,46 @@ function formata_data_extenso($strDate)
 	}
 
 	#total #topo #volt {
-
 		float: right;
 		height: 120px;
 		width: 60px;
 
 	}
 
-
-
 	a.logoffbtn {
-
 		display: block;
-
 		text-align: center;
-
 		text-decoration: none;
-
 		width: 50px;
-
 		background-image: url(../images/icons/Logoff.png);
-
-
 		margin: auto;
-
 		height: 100px;
-
 		background-repeat: no-repeat;
-
 		background-position: center center;
-
 	}
-
-
 
 	a.logoffbtn:hover {
-
 		background-image: url(../images/icons/Logoffh.png);
-
 		background-repeat: no-repeat;
-
 		background-position: center center;
-
 	}
 
-
-
 	a.voltarbtn {
-
-		display: block;
+		display: none;
 		text-align: center;
 		text-decoration: none;
 /*		background-image: url(images/tambor.png);*/
-		background-size: 118px 181px;
+		background-size: 94px 144px;
 		margin: auto;
 		background-repeat: no-repeat;
 		background-position: center center;
 		position: absolute;
-		width: 110px;
-		height: 181px;
+		top: 45px;
+		width: 94px;
+		height: 144px;
 		float: right;
 		background-color: #fff;
-
+		left: 430px;
 	}
 
 
@@ -238,9 +201,7 @@ function formata_data_extenso($strDate)
 	a.voltarbtn:hover {
 
 	/*background-image: url(images/icons/painelh.png);
-
 	background-repeat: no-repeat;
-
 	background-position: center center;*/
 
 }
@@ -435,32 +396,14 @@ function formata_data_extenso($strDate)
 
 	<body>
 
+
+
+		<div id="topo">
+			<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
+			<a class="logo" href="login.php" style="position:static !important">BBI</a>
+			<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaClienteAlmap.php" class="pro_btn">Voltar</a>
+		</div>
 		<div id="total">
-
-			<div id="topo">
-
-				<div id="img"><img src="<?php echo $_SESSION['imgUSUARIO'];?>" width="930" height="100" /></div>
-
-
-				<!--div id="volt"><a class="logoffbtn" href="destroisessao.php"></a></div-->
-
-				<div id="log">
-					<?php 
-					if($_SESSION['tipo'] == "cliente"){
-
-						?>
-
-						<a class="voltarbtn" href="areaCliente.php"></a>
-						<?php 
-					} else {
-						?>
-						<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $_SESSION['codCLIENTE']; ?>">&nbsp;</a>
-						<?php 
-					} 
-					?>
-				</div>
-
-			</div>
 
 			<div id="conteudo">
 				<iframe align="middle" src="<?php echo get_trusted_url($_SESSION['usuarioTABLEAU'],'srv.bbi.net.br',$url)?>"></iframe>

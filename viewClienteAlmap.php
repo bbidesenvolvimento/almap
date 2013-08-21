@@ -127,9 +127,7 @@ function formata_data_extenso($strDate)
 	#total #topo {
 		clear: both;
 		height: 60px;
-		
 		position: absolute;
-		/*width: 1100px;*/
 	}
 
 	#total #rodape {
@@ -399,23 +397,13 @@ height: auto;
 <script src="js/script.js"></script>
 
 </head>
-
-
-
 <body>
-
-
 		<div id="topo">
-
 			<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
-				<a class="logo" href="login.php" style="position:static !important">BBI</a>
-				<a style="float: right;
-margin-top: -45px;
-clear: both;
-margin-right: 6px;" href="areaClienteAlmap.php" class="pro_btn">Voltar</a>
+			<a class="logo" href="login.php" style="position:static !important">BBI</a>
+			<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaClienteAlmap.php" class="pro_btn">Voltar</a>
 		</div>
 	<div id="total">
-
 		<div id="conteudo">
 			<iframe align="middle" src="<?php echo get_trusted_url($UserTableau,'srv.bbi.net.br',$url)?>"></iframe>
 		</br>
