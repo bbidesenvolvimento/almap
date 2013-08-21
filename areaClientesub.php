@@ -187,7 +187,7 @@
                   <div class="clear"></div>
                 </div>
                 <span class="pro_image_style2">
-                  <a href="viewCliente.php?url=<?php echo $row_Recordset1['url_Pagina']; ?>&cp=<?php echo $row_Recordset1['cod_pagina']; ?>&cc=<?php echo $row_Recordset1['cod_cliente']; ?>"><img src="<?php echo $row_Recordset1['imgPagina']; ?>" alt="" width="100" height="100"></a>
+                  <a href="viewCliente.php?url=<?php echo $row_Recordset1['url_Pagina']; ?>&cp=<?php echo $row_Recordset1['cod_pagina']; ?>&cc=<?php echo $row_Recordset1['cod_cliente'].'&cm='.$cm; ?>"><img src="<?php echo $row_Recordset1['imgPagina']; ?>" alt="" width="100" height="100"></a>
                 </span>
                 
               </div>

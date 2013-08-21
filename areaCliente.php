@@ -163,7 +163,7 @@ $contadorgeral=0;
                <li><span><?php echo $row_Recordset2MST['nomeMaster'];?></span></li>
                <li><a class="current"><?php echo $_SESSION['nomeCLIENTE']; ?></a></li>
              </ul>
-             <div id="imgCli"/><img src="<?php echo $row_Recordset3MST['imgUSUARIO'];?>">  
+             <div id="imgCli"/>&nbsp;  
            </div>
          </div>
 

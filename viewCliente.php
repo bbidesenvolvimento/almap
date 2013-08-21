@@ -400,8 +400,14 @@ height: auto;
 
 		<div id="topo">
 			<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
-			<a class="logo" href="areaClientesub.php" style="position:static !important">BBI</a>
-			<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaClientesub.php" class="pro_btn">Voltar</a>
+			<?php if ($_SESSION['tipo'] != "master") : ?>
+			<a class="logo" href="areaCliente.php" style="position:static !important">BBI</a>
+			<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaCliente.php" class="pro_btn">Voltar</a>
+			<?php else: ?>
+			<a class="logo" href="areaClientesub.php?c=<?php echo $_GET['cc'].'&cm='.$_GET['cm'];?>" style="position:static !important">BBI</a>
+			<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaClientesub.php?c=<?php echo $_GET['cc'].'&cm='.$_GET['cm'];?>" class="pro_btn">Voltar</a>
+			<?php endif; ?>
+
 		</div>
 		<div id="total">
 
