@@ -1,17 +1,23 @@
 @import"reset.css";@import"pro_pages_style.css";@import"grid.css";@import"forms.css";@import"prettyPhoto.css";@import"jquery.snippet.min.css";
 @import"../skin/blue.monday/jplayer.blue.monday.css";@import"../css/smoothness/jquery-ui-1.8.17.custom.css";
+
+@font-face {
+    font-family: AlmapFonte;
+    src: url(../fonts/Trebuchet MS.ttf);
+}
+
 body{
 	/*background: url(../images/main-bg.gif) repeat center 0;*/
 	color:#333333;
 	position:relative;
 	min-width:1020px;
 	/*font-family: Arial, Helvetica, sans-serif;*/
-	font: 'Trebuchet MS';
+	font-family: AlmapFonte;
 	font-size: 16px;
 	line-height: 26px;
 }
 html,body{height:100%;
-font-family: 'Trebuchet MS', sans-serif;
+font-family: AlmapFonte;
 }
 p{padding-bottom:18px;}
 a{
@@ -25,7 +31,7 @@ a:hover{
 	color: #e02914;
 }
 /*  Header styles */
-h1,h2,h3,h4,h5,h6{line-height:1.3em;color:#3c2725; font: 'Trebuchet MS'; font-weight:normal; margin-bottom:10px;}
+h1,h2,h3,h4,h5,h6{line-height:1.3em;color:#3c2725; font-family: AlmapFonte; font-weight:normal; margin-bottom:10px;}
 h1{font-size:40px;}
 h2{font-size:35px;}
 h3{font-size:30px;} 
@@ -43,7 +49,7 @@ h6{font-size:22px;}
 .alignright{text-align:right}
 .aligncenter{
 	text-align:center;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: AlmapFonte;
 }
 .alignmiddle *{vertical-align:middle}
 .color1{color:#ff2100;}
@@ -54,7 +60,7 @@ h6{font-size:22px;}
 	margin:0 auto;
 	background:url(../images/content-bg.gif) repeat 0 0;
 	position:relative;
-	font: 'Trebuchet MS';
+	font-family: AlmapFonte;
 	
 }
 
@@ -187,7 +193,7 @@ nav {
 .sf-menu a {
 	display:		block;
 	position:		relative;
-	font-family: 'Oswald', sans-serif;
+	font-family: AlmapFonte;
 	font-size:18px;
 	line-height:22px;
 	text-transform:uppercase;
@@ -342,7 +348,7 @@ ul.sf-menu li li li.sfHover ul {
 .page1-box1 span {
 	display:block;
 	color:#e7654a;
-	font-family: 'Oswald', sans-serif;
+	font-family: AlmapFonte;
 	font-size:16px;
 	line-height:20px;
 	word-spacing:normal;
@@ -358,7 +364,7 @@ ul.sf-menu li li li.sfHover ul {
 .button1 {
 	color:#fff;
 	background:url(../images/button1.gif) repeat-x 0 0 #171111;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family: AlmapFonte;
 	text-transform:uppercase;
 	font-size:12px;
 	font-weight:bold;
@@ -392,7 +398,7 @@ ul.sf-menu li li li.sfHover ul {
 .page1-box2 a {
     color: #e7654a;
     display: inline-block;
-    font-family: 'Oswald',sans-serif;
+    font-family: AlmapFonte;
     font-size: 16px;
     margin-bottom: 9px;
 	word-spacing:-2px;
@@ -444,7 +450,7 @@ ul.sf-menu li li li.sfHover ul {
 
 .page1-box4 strong {
     color: #e7654a;
-    font-family: 'Oswald',sans-serif;
+    font-family: AlmapFonte;
     font-size: 16px;
     font-weight: normal;
     line-height: 20px;
@@ -486,7 +492,7 @@ ul.sf-menu li li li.sfHover ul {
     background: none repeat scroll 0 0 #FFFFFF;
     border: 1px solid #E8E8E9;
     color: #79676B;
-    font-family: Arial,Helvetica,sans-serif;
+    font-family: AlmapFonte;
     font-size: 10px;
     height: 26px;
     line-height: 26px;
@@ -703,7 +709,7 @@ ul.sf-menu li li li.sfHover ul {
 .page2-box4 span {
     color: #E7654A;
     display: block;
-    font-family: 'Oswald',sans-serif;
+    font-family: AlmapFonte;
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 20px;
@@ -743,7 +749,7 @@ ul.sf-menu li li li.sfHover ul {
 .page3-box1 span {
 	color:#554341;
 	font-size:17px;
-	font-family: 'Oswald', sans-serif;
+	font-family: AlmapFonte;
 	line-height:21px;
 	display:block;
 	margin-bottom:20px;
@@ -770,7 +776,7 @@ ul.sf-menu li li li.sfHover ul {
 .list2 a {
 	color:#79676b;
 	font-size:16px;
-	font-family: 'Oswald', sans-serif;
+	font-family: AlmapFonte;
 }
 
 .list2 a:hover {
@@ -821,7 +827,7 @@ ul.sf-menu li li li.sfHover ul {
 .page3-box2 span {
     color: #E7654A;
     display: block;
-    font-family: 'Oswald',sans-serif;
+    font-family: AlmapFonte;
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 12px;
@@ -862,7 +868,7 @@ ul.sf-menu li li li.sfHover ul {
 .page6-box2 span {
     color: #E7654A;
     display: block;
-    font-family: 'Oswald',sans-serif;
+    font-family: AlmapFonte;
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 15px;
@@ -889,7 +895,7 @@ ul.sf-menu li li li.sfHover ul {
 .page6-box3 span {
 	color: #E7654A;
     display: block;
-    font-family: 'Oswald',sans-serif;
+    font-family: AlmapFonte;
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 15px;
@@ -947,7 +953,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 .page5-box2 strong {
-	font-family: 'Oswald', sans-serif;
+	font-family: AlmapFonte;
 	color:#fff;
 	font-size:18px;
 	letter-spacing:-1px;
@@ -962,7 +968,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 .page5-box1 span {
-	font-family: 'Oswald', sans-serif;
+	font-family: AlmapFonte;
 	color:#3c2725;
 	font-size:18px;
 	letter-spacing:-1px;
@@ -1076,7 +1082,7 @@ footer .main {
 .foot-logo {
 	width:auto;
 	margin-right: 8px;
-	font-family: "Century Gothic";
+	font-family: AlmapFonte;
 	font-size: 25px;
 	font-weight: bolder;
 	color: #FFF;
@@ -1221,7 +1227,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', end
 p {
 	color: #6F8686;
 	font-size: 15px;
-	font-family: "Century Gothic", "Myriad Condensed Web";
+	font-family: AlmapFonte;
 }
 
 a.forgot {
@@ -1235,7 +1241,7 @@ a.forgot {
 	margin-right: auto;
 	margin-bottom: 70px;
 	margin-left: auto;
-	font-family: "Century Gothic";
+	font-family: AlmapFonte;
 }
 
 a.forgot:hover {
@@ -1354,7 +1360,7 @@ a.logoffbtn:hover {
 }
 
 #DigiCertClickID_vBSOqKxV {
-	font-family: "Century Gothic";
+	font-family: AlmapFonte;
 	font-size: 10px;
 	line-height: 30px;
 	font-weight: bold;

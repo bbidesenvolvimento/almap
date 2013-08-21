@@ -126,8 +126,10 @@ function formata_data_extenso($strDate)
 
 	#total #topo {
 		clear: both;
-		height: 210px;
-		width: 1100px;
+		height: 60px;
+		
+		position: absolute;
+		/*width: 1100px;*/
 	}
 
 	#total #rodape {
@@ -138,7 +140,7 @@ function formata_data_extenso($strDate)
 
 	#total #conteudo {
 		clear: both;
-		height: 850px;
+		height: 850px; 
 	}
 
 	#total #topo #img {
@@ -185,7 +187,7 @@ height: auto;
 	}
 
 	a.voltarbtn {
-		display: block;
+		display: none;
 		text-align: center;
 		text-decoration: none;
 /*		background-image: url(images/tambor.png);*/
@@ -402,20 +404,17 @@ height: auto;
 
 <body>
 
-	<div id="total">
 
 		<div id="topo">
 
 			<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
 				<a class="logo" href="login.php" style="position:static !important">BBI</a>
-				<a style="float:right;clear:both;margin-top: -40px;" href="areaClienteAlmap.php" class="pro_btn">Voltar</a>
-			<div id="img">
-				<img src="<?php echo $UserImg;?>" width="980" height="100" />
-
-			</div>
-
-
+				<a style="float: right;
+margin-top: -45px;
+clear: both;
+margin-right: 6px;" href="areaClienteAlmap.php" class="pro_btn">Voltar</a>
 		</div>
+	<div id="total">
 
 		<div id="conteudo">
 			<iframe align="middle" src="<?php echo get_trusted_url($UserTableau,'srv.bbi.net.br',$url)?>"></iframe>

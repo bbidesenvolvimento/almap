@@ -178,7 +178,7 @@ function getPageByCli($foo,$conexao){
 }
 
 #div_cli p {
-  font-family: Oswald;
+  font: AlmapFonte;
 color: #525151;
   font-size: 18px;
   text-align: left;
