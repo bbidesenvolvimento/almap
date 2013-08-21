@@ -6,13 +6,17 @@
     src: url(../fonts/Trebuchet MS.ttf);
 }
 
+* {
+	font-family: 'Trebuchet MS' !important;
+}
+
 body{
 	/*background: url(../images/main-bg.gif) repeat center 0;*/
 	color:#333333;
 	position:relative;
 	min-width:1020px;
 	/*font-family: Arial, Helvetica, sans-serif;*/
-	font-family: AlmapFonte;
+	font-family: 'Trebuchet MS';
 	font-size: 16px;
 	line-height: 26px;
 }
