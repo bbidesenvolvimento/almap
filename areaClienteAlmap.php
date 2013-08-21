@@ -118,7 +118,7 @@ function getPageByCli($foo,$conexao){
       </div>");
     echo "<span class='pro_image_style2'>";
     echo "<a href='viewClienteAlmap.php?url=$rs_Pg->url_Pagina&cp=$rs_Pg->cod_pagina&cc=$rs_Pg->cod_cliente'>";
-    echo "<img src='$rs_Pg->imgPagina' width='100' height='100'></a></span>";
+    echo "<img src='$rs_Pg->imgPagina' width='auto' height='100'></a></span>";
     print("</div><div class=\"aligncenter\"><strong><b>$rs_Pg->legenda</b><br></strong></div></div><br></div>");
   }
 }
