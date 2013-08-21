@@ -400,8 +400,8 @@ height: auto;
 
 		<div id="topo">
 			<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
-			<a class="logo" href="areaCliente.php" style="position:static !important">BBI</a>
-			<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaCliente.php" class="pro_btn">Voltar</a>
+			<a class="logo" href="areaClientesub.php" style="position:static !important">BBI</a>
+			<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaClientesub.php" class="pro_btn">Voltar</a>
 		</div>
 		<div id="total">
 
