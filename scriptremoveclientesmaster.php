@@ -44,7 +44,7 @@ if ((isset($_GET['cod'])) && ($_GET['cod'] != "")) {
     $deleteGoTo .= $_SERVER['QUERY_STRING'];
   }
   //header(sprintf("Location: %s", $deleteGoTo));
-  header("Location: adm.php?tab=3");
+  header("Location: adm.php?tab=1");
 }
 ?>
 

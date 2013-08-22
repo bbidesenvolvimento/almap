@@ -124,7 +124,7 @@ $totalRows_master = mysql_num_rows($master);
     <!--==============================header=================================-->   
     <header>
     	<div class="main">
-        <a class="logo" href="index.html">BBI</a>
+        <a class="logo" href="#">BBI</a>
         <nav>
                 <!--ul class="sf-menu">
                     <li><a href="index.html">HOME</a></li>
@@ -210,7 +210,7 @@ $totalRows_master = mysql_num_rows($master);
                      </tr>
                    </tr>
                  </table>
-                 <td> <input type="submit" class="pro_btn" value="Salvar"><a href="adm.php?tab=1" class="pro_btn pro_back"><span></span>Cancelar</a></td>
+                 <td> <input type="submit" class="pro_btn" value="Salvar"><a href="adm.php?tab=3" class="pro_btn pro_back"><span></span>Cancelar</a></td>
                  
                  <input type="hidden" name="MM_update" value="form">
                </form>

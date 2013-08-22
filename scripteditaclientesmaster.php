@@ -92,7 +92,7 @@ if (!isset($_SESSION['cod_adm'])) {
 <!--==============================header=================================-->   
    <header>
     	<div class="main">
-		<a class="logo" href="index.html">BBI</a>
+		<a class="logo" href="#">BBI</a>
             <nav>
                 <!--ul class="sf-menu">
                     <li><a href="index.html">HOME</a></li>
@@ -149,7 +149,7 @@ if (!isset($_SESSION['cod_adm'])) {
                  </tr>
                  </table>
                   <div id="ImgMaster"><img src="<?php echo $row_Recordset1['imgMaster']; ?>"></div> <BR>
-                 <input type="submit" class="pro_btn" value="Salvar"><a href="adm.php?tab=3" class="pro_btn pro_back"><span></span>Cancelar</a></td>
+                 <input type="submit" class="pro_btn" value="Salvar"><a href="adm.php?tab=1" class="pro_btn pro_back"><span></span>Cancelar</a></td>
                  </form>
 </div>
                </div>

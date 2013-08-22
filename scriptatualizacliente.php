@@ -53,7 +53,7 @@ else {
 	}
 	
 	mysql_close($conexao); //fecha conexão com banco de dados 
-    header("Location: adm.php?tab=1");
+    header("Location: adm.php?tab=3");
 
 
 

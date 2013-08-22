@@ -108,7 +108,7 @@
       <!--==============================header=================================-->   
       <header>
       	<div class="main">
-          <a class="logo" href="index.html">BBI</a>
+          <a class="logo" href="#">BBI</a>
           <nav>
                   <!--ul class="sf-menu">
                       <li><a href="index.html">HOME</a></li>
@@ -211,10 +211,7 @@
      <div class="wrapper p16">
       <article class="grid_24">
         <div id="textgq">
-          <img src="images/icons/icon-question.png" alt="">
-          <b>Precisa de ajuda?</b><br>
-          Para assuntos sobre o seu projeto: <a href="mailto:projetos@bbi.net.br">projetos@bbi.net.br</a><br>
-          Para assuntos técnicos: <a href="mailto:suporte@bbi.net.br">suporte@bbi.net.br</a></div>
+ 
         </article>
       </div>
       <div class="wrapper p16">

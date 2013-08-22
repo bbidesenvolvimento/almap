@@ -73,7 +73,7 @@
 }
 }
 
-header("Location: adm.php?tab=0");
+header("Location: adm.php?tab=3");
 
 } else {
   $mensagens=$mensagens."Erro, não possível inserir no banco de dados";

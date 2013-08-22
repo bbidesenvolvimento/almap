@@ -119,10 +119,10 @@ ul {
                     <div class="pro_wrapper"> 
                         <div id="tabs">
                           <ul>
-                            <li><a href="cadastracliente.php">Cadastro Cliente</a></li>
-                            <li><a href="editaclientes.php">Editar clientes</a></li>
                             <li><a href="cadastraclientemaster.php">Cadastro Clientes Master</a></li>
                             <li><a href="editaclientesmaster.php">Edita Clientes Master</a></li>
+                            <li><a href="cadastracliente.php">Cadastro Cliente</a></li>
+                            <li><a href="editaclientes.php">Editar clientes</a></li>
                             <?php if($_SESSION['login_adm'] == 'bbi'):?>
                             <li><a href="cadastrapagina.php">Criar Página</a></li>
                             <li><a href="editapaginas.php">Edita Páginas</a></li>

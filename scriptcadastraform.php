@@ -16,8 +16,9 @@
 	$mysqldate = date( 'Y-m-d H:i:s', $phpdate );
 	
 	$datacomentario = $mysqldate;
+	$comentariot = mysql_real_escape_string($comentario, $conexao);
 	
-	$string_sql = "INSERT INTO comentarios (codPagina,texto,dataComentario,codCliente,nomeCliente) VALUES ('$cp','$comentario','$datacomentario','$cc','$nc')";
+	$string_sql = "INSERT INTO comentarios (codPagina,texto,dataComentario,codCliente,nomeCliente) VALUES ('$cp','$comentariot','$datacomentario','$cc','$nc')";
 	
 	$select_db = mysql_select_db("almap"); //seleciona o banco de dados
 	mysql_query($string_sql,$conexao) or die(mysql_error());

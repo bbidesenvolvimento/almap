@@ -22,31 +22,19 @@ $senha = "nao";
     $login_check = mysql_num_rows($sql);
  
     if ($login_check > 0){
- 
         while ($row = mysql_fetch_array($sql)){
- 
             foreach ($row AS $key => $val){
- 
                 $$key = stripslashes( $val );
- 
             }
- 
             $_SESSION['codCLIENTE'] = $codCLIENTE;
             $_SESSION['nomeCLIENTE'] = $nomeCLIENTE;
             $_SESSION['loginCLIENTE'] = $loginCLIENTE;
             $_SESSION['usuarioTABLEAU'] = $usuarioTABLEAU;
             $_SESSION['imgUSUARIO'] = $imgUSUARIO;
- 
-            
- 
             header("Location: areaCliente.php");
- 
         }
- 
     }else{
- 
                  header("Location: loginerro.php");
- 
     }
  
 }
