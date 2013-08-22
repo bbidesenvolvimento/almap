@@ -249,11 +249,7 @@ $(function() {
       </div>     
       <div class="wrapper p16">
         <article class="grid_24">
-          <div id="textgq">
-            <img src="images/icons/icon-question.png" alt="">
-            <b>Precisa de ajuda?</b><br>
-            Para assuntos sobre o seu projeto: <a href="mailto:projetos@bbi.net.br">projetos@bbi.net.br</a><br>
-            Para assuntos técnicos: <a href="mailto:suporte@bbi.net.br">suporte@bbi.net.br</a><br></div>
+ 
           </article>
           <br>
           <a href="destroisessao.php" style="float:right; margin-top:20px; margin-right:30px;" class="pro_btn pro_sign-out"><span></span>Logoff</a>

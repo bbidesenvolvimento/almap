@@ -150,7 +150,7 @@ function formata_data_extenso($strDate)
 	#img img{
 		float: right;
 		width: 150px;
-height: auto;
+		height: auto;
 	}
 
 	#total #topo #log {
@@ -188,7 +188,7 @@ height: auto;
 		display: none;
 		text-align: center;
 		text-decoration: none;
-/*		background-image: url(images/tambor.png);*/
+		/*		background-image: url(images/tambor.png);*/
 		background-size: 94px 144px;
 		margin: auto;
 		background-repeat: no-repeat;
@@ -304,6 +304,10 @@ height: auto;
 			width: 1050px;
 			padding: 25px;
 		}
+
+		#comentarios {
+			width: 1100px;
+		}
 		#total #comentarios mm_hiddenregion .pro_slide-down-box dt h5 {
 			font-weight: normal;
 		}
@@ -333,15 +337,13 @@ height: auto;
 			text-decoration: none;
 		}
 
-
 		#comenta {
 			text-align: right;
 			margin-right: 5px;
 			display: inline;
-			margin-left: 400px;
+			float: right;
 			cursor: url(images/icons/close1.png), auto;
 		}
-
 
 
 		#total .seal {
@@ -398,16 +400,16 @@ height: auto;
 
 </head>
 <body>
-		<div id="topo">
-			<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
-			<a class="logo" href="login.php" style="position:static !important">BBI</a>
-			<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaClienteAlmap.php" class="pro_btn">Voltar</a>
-		</div>
+	<div id="topo">
+		<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
+		<a class="logo" href="login.php" style="position:static !important">BBI</a>
+		<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaClienteAlmap.php" class="pro_btn">Voltar</a>
+	</div>
 	<div id="total">
 		<div id="conteudo">
 			<iframe align="middle" src="<?php echo get_trusted_url($UserTableau,'srv.bbi.net.br',$url)?>"></iframe>
 		</br>
-		<a style="float:right" href="destroisessao.php" class="pro_btn"><span></span>Logoff</a>
+		
 	</div>
 
 	<div id="comentarios">
@@ -424,64 +426,51 @@ height: auto;
 		<dl class="pro_slide-down-box">
 			<dt><h5><span></span> Comentário postado por <div id="destak"><?php echo $row_Recordset1['nomeCliente']; ?></div> em <div id="destak"><?php echo formata_data_extenso($row_Recordset1['dataComentario']); ?></div>
 				<?php 
-				if($row_Recordset1['codCliente'] == $_SESSION['codCLIENTE']){
+				//if($row_Recordset1['codCliente'] == $_SESSION['codCLIENTE']){
+				?>
+				<!-- Esta parte e dedicada a remover o comentario do proprio cliente -->
+				<a href="removecomentario.php?tp=Master&codComentario=<?php echo $row_Recordset1['codComentario']; ?>&cp=<?php echo $codPagina; ?>&url=<?php echo $url ?>&cc=<?php echo $_GET['cc']; ?>" >
+					<div id="comenta">Excluir</div></a>
+					<?php //} ?>
+				</h5></dt> 
+				<dd><p><?php echo $row_Recordset1['texto']; ?></p></dd>
+			</dl>
 
+			<?php } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1)); ?>
+			<?php } // Show if recordset not empty ?>
 
-					?>
-					<!-- Esta parte e dedicada a remover o comentario do proprio cliente -->
-					<a href="removecomentario.php?codComentario=<?php echo $row_Recordset1['codComentario']; ?>&cp=<?php echo $codPagina; ?>&url=<?php echo $url ?>&cc=<?php echo $row_Recordset1['codCliente']; ?>" >
-
-						<div id="comenta">Excluir</div></a>
-
-						<?php } ?>
-					</h5></dt> 
-					<dd><p><?php echo $row_Recordset1['texto']; ?></p></dd>
-				</dl>
-
-				<?php } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1)); ?>
-				<?php } // Show if recordset not empty ?>
-
-				<div id="areaa">
-					<table width="100%">
-						<form action="scriptcadastraform.php" method="POST" enctype="multipart/form-data">
-							<tr>
-								<td width="17%" valign="top"><strong>Postar Comentário:</strong></td>
-								<td width="83%">
-									<textarea name="comentario" cols="100%" rows="5" id="comentario" style="font-family:'Century Gothic'" dir="ltr" lang="pt" onfocus="if (this.value == 'Digite aqui seu comentário') {this.value=''}" onblur="if(this.value == '') { this.value='Digite aqui seu comentário'}" spellcheck="true" value="Digite aqui seu comentário">Digite aqui seu comentário</textarea>
-									<input type="hidden" id="url" name="url" value="<?php echo $url ?>">
-									<input type="hidden" id="cp" name="cp" value="<?php 
-									echo $codPagina;
-									?>">
-									<input type="hidden" id="cc" name="cc" value="<?php echo $_SESSION['codCLIENTE']; ?>">
-									<input type="hidden" id="nc" name="nc" value="<?php echo $_SESSION['nomeCLIENTE']; ?>">
-
-
-								</td>
-							</tr>
-							<tr>
-								<td>&nbsp;</td>
-								<td><input type="submit" class="button1" value="Enviar"></td>
-							</tr>
-						</form>
-					</table>
-				</div>
-
-
-
-
-
-
+			<div id="areaa">
+				<table width="100%">
+					<form action="scriptcadastraform.php" method="POST" enctype="multipart/form-data">
+						<tr>
+							<td width="17%" valign="top"><strong>Postar Comentário:</strong></td>
+							<td width="83%">
+								<textarea name="comentario" cols="100%" rows="5" id="comentario" style="font-family:'Century Gothic'" dir="ltr" lang="pt" onfocus="if (this.value == 'Digite aqui seu comentário') {this.value=''}" onblur="if(this.value == '') { this.value='Digite aqui seu comentário'}" spellcheck="true" value="Digite aqui seu comentário">Digite aqui seu comentário</textarea>
+								<input type="hidden" id="url" name="url" value="<?php echo $url ?>">
+								<input type="hidden" id="cp" name="cp" value="<?php echo $codPagina;?>">
+								<input type="hidden" id="cc" name="cc" value="<?php echo $_GET['cc']; ?>">
+								<input type="hidden" id="nc" name="nc" value="AlmappBBDO">
+								<input type="hidden" id="tp" name="tp" value="master">
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input type="submit" class="button1" value="Enviar"></td>
+						</tr>
+					</form>
+				</table>
 			</div>
-
-			<div id="rodape">&nbsp;<br />
-				<br />
-			</div>
-
-
+			<a style="float:right; margin-top:10px;" href="destroisessao.php" class="pro_btn"><span></span>Logoff</a>
 		</div>
-	</body>
+		<div id="rodape">&nbsp;<br />
+			<br />
+		</div>
 
-	</html>
-	<?php
-	mysql_free_result($Recordset1);
-	?>
+
+	</div>
+</body>
+
+</html>
+<?php
+mysql_free_result($Recordset1);
+?>

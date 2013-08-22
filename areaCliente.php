@@ -185,16 +185,16 @@ $contadorgeral=0;
            <div class="pro_wrapper">
             <?php } ?>
 
-                    <?php if(!$row_Recordset1): ?><br>
-                    <center>Nenhum dashboard cadastrado até o momento.</center>
-                  <?php else: ?>
-            <div class="grid_7">
-              <div class="pro_wrapper">
-                <div class="aligncenter">
-                  <div class="pro_wrapper-large">
-                    <div class="clear"></div>
-                  </div>
-                  <span class="pro_image_style2">
+            <?php if(!$row_Recordset1): ?><br>
+            <center>Nenhum dashboard cadastrado até o momento.</center>
+          <?php else: ?>
+          <div class="grid_7">
+            <div class="pro_wrapper">
+              <div class="aligncenter">
+                <div class="pro_wrapper-large">
+                  <div class="clear"></div>
+                </div>
+                <span class="pro_image_style2">
 
                   <a href="viewCliente.php?url=<?php echo $row_Recordset1['url_Pagina']; ?>&cp=<?php echo $row_Recordset1['cod_pagina']; ?>&cc=<?php echo $row_Recordset1['cod_cliente']; ?>"><img src="<?php echo $row_Recordset1['imgPagina']; ?>" alt="" width="auto" height="100"></a>
                 <?php endif;?>
@@ -221,10 +221,6 @@ $contadorgeral=0;
    <div class="wrapper p16">
     <article class="grid_24">
       <div id="textgq">
-        <img src="images/icons/icon-question.png" alt="">
-        <b>Precisa de ajuda?</b><br>
-        Para assuntos sobre o seu projeto: <a href="mailto:projetos@bbi.net.br">projetos@bbi.net.br</a><br>
-        Para assuntos técnicos: <a href="mailto:suporte@bbi.net.br">suporte@bbi.net.br</a><br></div>
       </article>
       <br>
       <a href="destroisessao.php" style="float:right; margin-top:20px; margin-right:30px;" class="pro_btn pro_sign-out"><span></span>Logoff</a>

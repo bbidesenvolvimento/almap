@@ -97,9 +97,6 @@ function formata_data_extenso($strDate)
 }
 
 
-
-
-
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -144,7 +141,7 @@ function formata_data_extenso($strDate)
 	#img img{
 		float: right;
 		width: 150px;
-height: auto;
+		height: auto;
 	}
 
 	#total #topo #log {
@@ -182,7 +179,7 @@ height: auto;
 		display: none;
 		text-align: center;
 		text-decoration: none;
-/*		background-image: url(images/tambor.png);*/
+		/*		background-image: url(images/tambor.png);*/
 		background-size: 94px 144px;
 		margin: auto;
 		background-repeat: no-repeat;
@@ -298,6 +295,12 @@ height: auto;
 			width: 1050px;
 			padding: 25px;
 		}
+
+
+		#comentarios {
+			width: 1100px;
+		}
+
 		#total #comentarios mm_hiddenregion .pro_slide-down-box dt h5 {
 			font-weight: normal;
 		}
@@ -332,11 +335,9 @@ height: auto;
 			text-align: right;
 			margin-right: 5px;
 			display: inline;
-			margin-left: 400px;
+			float: right;
 			cursor: url(images/icons/close1.png), auto;
 		}
-
-
 
 		#total .seal {
 		}
@@ -357,10 +358,9 @@ height: auto;
 		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<link href="/images/icons/favicon.ico" rel="icon" type="image/x-icon" />
 		
-<link rel="stylesheet" href="js/ui/jquery-ui.css" />
-   <script src="js/ui/jquery-1.9.1.js"></script>
-   <script src="js/ui/jquery-ui.js"></script> 
-   <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="js/ui/jquery-ui.css" />
+		<script src="js/ui/jquery-1.9.1.js"></script>
+		<link rel="stylesheet" href="css/style.css">
 
 		<script type="text/javascript">
 
@@ -386,109 +386,92 @@ height: auto;
 */
 
 
-		</script>
-		<script src="js/jquery-1.7.1.min.js"></script>
-		<script src="js/script.js"></script>
+</script>
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/script.js"></script>
 
-	</head>
-
-
-
-	<body>
+</head>
 
 
 
-		<div id="topo">
-			<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
-			<?php if ($_SESSION['tipo'] != "master") : ?>
-			<a class="logo" href="areaCliente.php" style="position:static !important">BBI</a>
-			<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaCliente.php" class="pro_btn">Voltar</a>
-			<?php else: ?>
-			<a class="logo" href="areaClientesub.php?c=<?php echo $_GET['cc'].'&cm='.$_GET['cm'];?>" style="position:static !important">BBI</a>
-			<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaClientesub.php?c=<?php echo $_GET['cc'].'&cm='.$_GET['cm'];?>" class="pro_btn">Voltar</a>
-			<?php endif; ?>
+<body>
 
-		</div>
-		<div id="total">
 
-			<div id="conteudo">
-				<iframe align="middle" src="<?php echo get_trusted_url($_SESSION['usuarioTABLEAU'],'srv.bbi.net.br',$url)?>"></iframe>
-			</br>
-			<a style="float:right" href="destroisessao.php" class="pro_btn"><span></span>Logoff</a>
+
+	<div id="topo">
+		<a class="voltarbtn" href="areaClienteMaster.php?cod=<?php echo $UserTableau ?>">&nbsp;</a>
+		<?php if ($_SESSION['tipo'] != "master") : ?>
+		<a class="logo" href="areaCliente.php" style="position:static !important">BBI</a>
+		<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaCliente.php" class="pro_btn">Voltar</a>
+	<?php else: ?>
+	<a class="logo" href="areaClientesub.php?c=<?php echo $_GET['cc'].'&cm='.$_GET['cm'];?>" style="position:static !important">BBI</a>
+	<a style="float: right;margin-top: -45px;clear: both;margin-right: 6px;" href="areaClientesub.php?c=<?php echo $_GET['cc'].'&cm='.$_GET['cm'];?>" class="pro_btn">Voltar</a>
+<?php endif; ?>
+
+</div>
+<div id="total">
+
+	<div id="conteudo">
+		<iframe align="middle" src="<?php echo get_trusted_url($_SESSION['usuarioTABLEAU'],'srv.bbi.net.br',$url)?>"></iframe>
+
+	</div>
+
+	<div id="comentarios">
+		<h3><br />
+			<br /><br />
+
+			Área de Comentários 
+
+			<br />
+			<br />
+		</h3>
+		<?php if ($totalRows_Recordset1 > 0) { // Show if recordset not empty ?>
+		<?php do { ?>
+		<dl class="pro_slide-down-box">
+			<dt><h5><span></span> Comentário postado por <div id="destak"><?php echo $row_Recordset1['nomeCliente']; ?></div> em <div id="destak"><?php echo formata_data_extenso($row_Recordset1['dataComentario']); ?></div>
+				<?php 
+				if($row_Recordset1['codCliente'] == $_SESSION['codCLIENTE']){
+					?>
+					<!-- Esta parte e dedicada a remover o comentario do proprio cliente -->
+						<?php if($_SESSION['tipo'] !== 'cliente'):?>
+					<a href="removecomentario.php?codComentario=<?php echo $row_Recordset1['codComentario']; ?>&cp=<?php echo $codPagina; ?>&url=<?php echo $url ?>&cc=<?php echo $row_Recordset1['codCliente']; ?>" >
+						<div id="comenta">Excluir</div></a>
+					<?php endif;?>
+					<?php } ?>
+				</h5></dt> 
+				<dd><p><?php echo $row_Recordset1['texto']; ?></p></dd>
+			</dl>
+
+			<?php } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1)); ?>
+			<?php } // Show if recordset not empty ?>
+
+			<div id="areaa">
+				<table width="100%">
+					<form action="scriptcadastraform.php" method="POST" enctype="multipart/form-data">
+						<tr>
+							<td width="17%" valign="top"><strong>Postar Comentário:</strong></td>
+							<td width="83%">
+								<textarea name="comentario" cols="100%" rows="5" id="comentario" style="font-family:'Century Gothic'" dir="ltr" lang="pt" onfocus="if (this.value == 'Digite aqui seu comentário') {this.value=''}" onblur="if(this.value == '') { this.value='Digite aqui seu comentário'}" spellcheck="true" value="Digite aqui seu comentário">Digite aqui seu comentário</textarea>
+								<input type="hidden" id="url" name="url" value="<?php echo $url ?>">
+								<input type="hidden" id="cp" name="cp" value="<?php echo $codPagina;?>">
+								<input type="hidden" id="cc" name="cc" value="<?php echo $_SESSION['codCLIENTE']; ?>">
+								<input type="hidden" id="nc" name="nc" value="<?php echo $_SESSION['nomeCLIENTE']; ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td><input type="submit" class="button1" value="Enviar"></td>
+						</tr>
+					</form>
+				</table>
 			</div>
+		</div><a style="float:right;" href="destroisessao.php" class="pro_btn"><span></span>Logoff</a>
+		<div id="rodape">&nbsp;<br />
+		</div>
+	</div>
+</body>
 
-			<div id="comentarios">
-				<h3><br />
-					<br /><br />
-
-					Área de Comentários 
-
-					<br />
-					<br />
-				</h3>
-				<?php if ($totalRows_Recordset1 > 0) { // Show if recordset not empty ?>
-				<?php do { ?>
-				<dl class="pro_slide-down-box">
-					<dt><h5><span></span> Comentário postado por <div id="destak"><?php echo $row_Recordset1['nomeCliente']; ?></div> em <div id="destak"><?php echo formata_data_extenso($row_Recordset1['dataComentario']); ?></div>
-						<?php 
-						if($row_Recordset1['codCliente'] == $_SESSION['codCLIENTE']){
-
-
-							?>
-							<!-- Esta parte e dedicada a remover o comentario do proprio cliente -->
-							<a href="removecomentario.php?codComentario=<?php echo $row_Recordset1['codComentario']; ?>&cp=<?php echo $codPagina; ?>&url=<?php echo $url ?>&cc=<?php echo $row_Recordset1['codCliente']; ?>" >
-
-								<div id="comenta">Excluir</div></a>
-
-								<?php } ?>
-							</h5></dt> 
-							<dd><p><?php echo $row_Recordset1['texto']; ?></p></dd>
-						</dl>
-
-						<?php } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1)); ?>
-						<?php } // Show if recordset not empty ?>
-
-						<div id="areaa">
-							<table width="100%">
-								<form action="scriptcadastraform.php" method="POST" enctype="multipart/form-data">
-									<tr>
-										<td width="17%" valign="top"><strong>Postar Comentário:</strong></td>
-										<td width="83%">
-											<textarea name="comentario" cols="100%" rows="5" id="comentario" style="font-family:'Century Gothic'" dir="ltr" lang="pt" onfocus="if (this.value == 'Digite aqui seu comentário') {this.value=''}" onblur="if(this.value == '') { this.value='Digite aqui seu comentário'}" spellcheck="true" value="Digite aqui seu comentário">Digite aqui seu comentário</textarea>
-											<input type="hidden" id="url" name="url" value="<?php echo $url ?>">
-											<input type="hidden" id="cp" name="cp" value="<?php 
-											echo $codPagina;
-											?>">
-											<input type="hidden" id="cc" name="cc" value="<?php echo $_SESSION['codCLIENTE']; ?>">
-											<input type="hidden" id="nc" name="nc" value="<?php echo $_SESSION['nomeCLIENTE']; ?>">
-
-
-										</td>
-									</tr>
-									<tr>
-										<td>&nbsp;</td>
-										<td><input type="submit" class="button1" value="Enviar"></td>
-									</tr>
-								</form>
-							</table>
-						</div>
-
-
-
-
-
-
-					</div>
-
-					<div id="rodape">&nbsp;<br />
-						<br />
-					</div>
-
-
-				</div>
-			</body>
-
-			</html>
-			<?php
-			mysql_free_result($Recordset1);
-			?>
+</html>
+<?php
+mysql_free_result($Recordset1);
+?>
