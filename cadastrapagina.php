@@ -131,7 +131,6 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
          </tr>
        </table>
        <input type="submit" class="pro_btn pro_submit" value="Cadastrar" name="bb" id="bb">
-       <input type="submit" class="pro_btn pro_submit" value="Cadastrar" name="bb" id="bb">
      </form>
      
    </div>

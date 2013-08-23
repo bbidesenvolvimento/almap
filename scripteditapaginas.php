@@ -125,7 +125,7 @@ $totalRows_Recordset2 = mysql_num_rows($Recordset2);
     <!--==============================header=================================-->   
     <header>
     	<div class="main">
-        <a class="logo" href="index.html">BBI</a>
+        <a class="logo" href="# ">BBI</a>
         <nav>
           <ul class="sf-menu">
           </ul>
