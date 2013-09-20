@@ -439,7 +439,7 @@ function formata_data_extenso($strDate)
 					<?php endif;?>
 					<?php } ?>
 				</h5></dt> 
-				<dd><p><?php echo $row_Recordset1['texto']; ?></p></dd>
+				<dd><p><?php echo nl2br($row_Recordset1['texto']); ?></p></dd>
 			</dl>
 
 			<?php } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1)); ?>
